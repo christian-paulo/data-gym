@@ -2,7 +2,7 @@
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="20086" systemVersion="21F79" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithCloudKit="YES" userDefinedModelVersionIdentifier="">
     <entity name="Class" representedClassName="Class" syncable="YES" codeGenerationType="class">
         <attribute name="day_week" optional="YES" attributeType="String"/>
-        <attribute name="hour" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="hour" optional="YES" attributeType="String"/>
         <attribute name="name" optional="YES" attributeType="String"/>
         <attribute name="semester_school" optional="YES" attributeType="String"/>
         <relationship name="teacher" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Teacher" inverseName="classes" inverseEntity="Teacher"/>
@@ -14,7 +14,7 @@
         <relationship name="classes" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Class" inverseName="teacher" inverseEntity="Class"/>
     </entity>
     <elements>
-        <element name="Teacher" positionX="-63" positionY="-18" width="128" height="89"/>
         <element name="Class" positionX="-63" positionY="-9" width="128" height="104"/>
+        <element name="Teacher" positionX="-63" positionY="-18" width="128" height="89"/>
     </elements>
 </model>
