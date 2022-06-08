@@ -43,43 +43,53 @@ class ViewController: UIViewController {
         
     }
     
-    @IBAction func addTapped(_sender: Any){
-
-        
+       @IBAction func addTapped(_sender: Any){
+           
+    
         let alert = UIAlertController(title: "Add Class", message: "Whats ir their name?", preferredStyle: .alert)
         alert.addTextField()
-        
+
         let submitButton = UIAlertAction(title: "Add", style: .default) {
             (action) in
-            
-            let textfield = alert.textFields![0]
-            
+
+           let textfield = alert.textFields![0]
+
             // TODO: Create a class object
-            
+
             let newClass = Class(context: self.context)
             newClass.name = textfield.text
             newClass.day_week = "Segunda-feira"
             newClass.hour = "8 as 10"
             newClass.semester_school = "2020.1"
-            
-            
+
+
             //TODO: save to data
-            
+
             do{
                 try self.context.save()
             }
             catch{
-                
+
             }
             //re-fecth the data
             
             self.fetchClass()
 
         }
+
+        let cancelButton = UIAlertAction(title: "Cancel", style: .cancel) {
+            (action) in
+
+            self.fetchClass()
+
+        }
+
+
         alert.addAction((submitButton))
-                
+        alert.addAction((cancelButton))
+
         self.present(alert, animated: true, completion: nil)
-        
+
     }
 }
 
@@ -133,10 +143,10 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource{
         
         let alert = UIAlertController(title: "Edit Person", message: "Edit name: ", preferredStyle: .alert)
         alert.addTextField()
-        
+
         let textfield = alert.textFields![0]
         textfield.text = classe.name
-        
+  
         let saveButton = UIAlertAction(title: "Save", style: .default) { (action) in
             
             //GET THE TEXTFIELD FOR THE ALERT
@@ -155,7 +165,13 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource{
             }
             self.fetchClass()
         }
+        let cancel = UIAlertAction(title: "Cancel", style: .cancel) { (action) in
+
+            self.fetchClass()
+        }
         alert.addAction(saveButton)
+        alert.addAction(cancel)
+        
         self.present(alert, animated: true, completion: nil)
     }
 }
