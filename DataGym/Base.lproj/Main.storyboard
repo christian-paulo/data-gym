@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="tRZ-vA-kzt">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="tRZ-vA-kzt">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
@@ -37,7 +37,7 @@
                     <navigationItem key="navigationItem" id="EEQ-xC-4Q4">
                         <barButtonItem key="rightBarButtonItem" image="plus" catalog="system" id="rKW-iV-v7L">
                             <connections>
-                                <segue destination="ECJ-Jr-R9A" kind="presentation" id="8Ws-Qg-E3D"/>
+                                <segue destination="ECJ-Jr-R9A" kind="presentation" id="Frj-KE-svy"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -61,7 +61,7 @@
                                 <items>
                                     <navigationItem title="Ficha" id="P1V-da-Mf6">
                                         <barButtonItem key="leftBarButtonItem" style="plain" id="zrl-ct-e0K">
-                                            <button key="customView" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="dL1-9O-ABj">
+                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="dL1-9O-ABj">
                                                 <rect key="frame" x="20" y="11" width="91.5" height="34.5"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <state key="normal" title="Button"/>
@@ -69,7 +69,7 @@
                                             </button>
                                         </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" style="plain" id="RPe-9E-9gf">
-                                            <button key="customView" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="UHK-0S-fyW">
+                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="UHK-0S-fyW">
                                                 <rect key="frame" x="302" y="11" width="92" height="34.5"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <state key="normal" title="Button"/>
@@ -224,19 +224,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" showsMenuAsPrimaryAction="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" changesSelectionAsPrimaryAction="YES" translatesAutoresizingMaskIntoConstraints="NO" id="i8J-pD-d9a">
-                                <rect key="frame" x="302" y="311" width="67" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <gestureRecognizers/>
-                                <menu key="menu" title="Inline Menu" id="kaH-id-wBb">
-                                    <menuOptions key="menuOptions" displayInline="YES"/>
-                                    <children>
-                                        <command title="Item 1" id="Ybv-79-vqe"/>
-                                        <command title="Item 2" id="qgf-28-A0I"/>
-                                    </children>
-                                </menu>
-                                <state key="normal" title="Button"/>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Alunos" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vGz-Gm-tXV">
                                 <rect key="frame" x="42" y="358" width="52" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -244,8 +231,12 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="GCN-NQ-21G">
+                                <rect key="frame" x="230" y="310" width="156" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                            </datePicker>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" showsMenuAsPrimaryAction="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" changesSelectionAsPrimaryAction="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BAB-Kr-Fpc">
-                                <rect key="frame" x="304" y="349" width="67" height="30"/>
+                                <rect key="frame" x="302" y="353" width="67" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <gestureRecognizers/>
                                 <menu key="menu" title="Inline Menu" id="f8D-8i-JFP">
@@ -257,10 +248,6 @@
                                 </menu>
                                 <state key="normal" title="Adicionar"/>
                             </button>
-                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="GCN-NQ-21G">
-                                <rect key="frame" x="-3" y="435" width="414" height="162"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                            </datePicker>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="kvX-RA-Rxm"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -268,7 +255,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UuE-aX-fmm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2635" y="-200"/>
+            <point key="canvasLocation" x="2634.7826086956525" y="-200.22321428571428"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="gg6-5E-dQW">
@@ -297,7 +284,7 @@
                     <navigationItem key="navigationItem" id="Ujc-kh-tF1">
                         <barButtonItem key="rightBarButtonItem" image="plus" catalog="system" id="b6x-O9-3gZ">
                             <connections>
-                                <segue destination="Pgj-2S-OY0" kind="presentation" id="rW7-Lz-gj5"/>
+                                <segue destination="Pgj-2S-OY0" kind="presentation" id="ubX-0i-8TG"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -419,24 +406,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MuD-8R-OKn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="970" y="794"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="eE8-RF-Gxb">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="UZF-w6-ebC" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="saW-5a-d3Q">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="Tdl-Mt-tR5" kind="relationship" relationship="rootViewController" id="RVq-L0-J5C"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dam-Et-fed" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-364" y="-944"/>
         </scene>
     </scenes>
     <resources>
