@@ -638,6 +638,7 @@
 			currentVersion = ED2111CC28430C17001D6CAE /* DataGym.xcdatamodel */;
 			path = DataGym.xcdatamodeld;
 			sourceTree = "<group>";
+			usesTabs = 0;
 			versionGroupType = wrapper.xcdatamodel;
 		};
 /* End XCVersionGroup section */
