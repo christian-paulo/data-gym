@@ -9,8 +9,7 @@ import UIKit
 import CoreData
 
 class ViewController: UIViewController {
-    
-    
+      
     @IBOutlet var tableView: UITableView!
     
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
