@@ -154,7 +154,7 @@
 				ED2111BB28430C17001D6CAE /* Sources */,
 				ED2111BC28430C17001D6CAE /* Frameworks */,
 				ED2111BD28430C17001D6CAE /* Resources */,
-				D65F4134284F9CAF001B6020 /* ShellScript */,
+				EDFFE6642850C6B70016AA59 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -273,7 +273,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		D65F4134284F9CAF001B6020 /* ShellScript */ = {
+		EDFFE6642850C6B70016AA59 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -288,7 +288,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nif which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"warning: Swiftlint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n\n";
+			shellScript = "if which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"warning: Swiftlint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -345,6 +345,7 @@
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
+			usesTabs = 0;
 		};
 		ED2111D028430C19001D6CAE /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
@@ -653,6 +654,7 @@
 			currentVersion = ED2111CC28430C17001D6CAE /* DataGym.xcdatamodel */;
 			path = DataGym.xcdatamodeld;
 			sourceTree = "<group>";
+			usesTabs = 0;
 			versionGroupType = wrapper.xcdatamodel;
 		};
 /* End XCVersionGroup section */
