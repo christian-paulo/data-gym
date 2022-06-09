@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D6B6C5B828521B8600BEB4A5 /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B6C5B728521B8600BEB4A5 /* CustomView.swift */; };
+		D6B6C5BA28521B9B00BEB4A5 /* CustomView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6B6C5B928521B9B00BEB4A5 /* CustomView.xib */; };
 		ED2111C328430C17001D6CAE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2111C228430C17001D6CAE /* AppDelegate.swift */; };
 		ED2111C528430C17001D6CAE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2111C428430C17001D6CAE /* SceneDelegate.swift */; };
 		ED2111C728430C17001D6CAE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2111C628430C17001D6CAE /* ViewController.swift */; };
@@ -37,6 +39,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D6B6C5B728521B8600BEB4A5 /* CustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
+		D6B6C5B928521B9B00BEB4A5 /* CustomView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomView.xib; sourceTree = "<group>"; };
 		ED2111BF28430C17001D6CAE /* DataGym.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DataGym.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED2111C228430C17001D6CAE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ED2111C428430C17001D6CAE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -78,6 +82,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D6B6C5B628521B4C00BEB4A5 /* CustomComponent */ = {
+			isa = PBXGroup;
+			children = (
+				D6B6C5B728521B8600BEB4A5 /* CustomView.swift */,
+				D6B6C5B928521B9B00BEB4A5 /* CustomView.xib */,
+			);
+			path = CustomComponent;
+			sourceTree = "<group>";
+		};
 		ED2111B628430C17001D6CAE = {
 			isa = PBXGroup;
 			children = (
@@ -101,6 +114,7 @@
 		ED2111C128430C17001D6CAE /* DataGym */ = {
 			isa = PBXGroup;
 			children = (
+				D6B6C5B628521B4C00BEB4A5 /* CustomComponent */,
 				ED2111C228430C17001D6CAE /* AppDelegate.swift */,
 				ED2111C428430C17001D6CAE /* SceneDelegate.swift */,
 				ED2111C628430C17001D6CAE /* ViewController.swift */,
@@ -236,6 +250,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ED2111D228430C19001D6CAE /* LaunchScreen.storyboard in Resources */,
+				D6B6C5BA28521B9B00BEB4A5 /* CustomView.xib in Resources */,
 				ED2111CF28430C19001D6CAE /* Assets.xcassets in Resources */,
 				ED2111CA28430C17001D6CAE /* Main.storyboard in Resources */,
 			);
@@ -282,6 +297,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D6B6C5B828521B8600BEB4A5 /* CustomView.swift in Sources */,
 				ED2111C728430C17001D6CAE /* ViewController.swift in Sources */,
 				ED2111C328430C17001D6CAE /* AppDelegate.swift in Sources */,
 				ED2111C528430C17001D6CAE /* SceneDelegate.swift in Sources */,
