@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="kdh-aO-2Uk">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
@@ -52,6 +52,9 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="9lf-hA-H0S" kind="show" id="n6K-aU-mER"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -68,7 +71,11 @@
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="W0I-Y2-9jX">
-                        <barButtonItem key="rightBarButtonItem" image="plus" catalog="system" id="lOI-WC-0S1"/>
+                        <barButtonItem key="rightBarButtonItem" image="plus" catalog="system" id="lOI-WC-0S1">
+                            <connections>
+                                <segue destination="SDE-bu-IOt" kind="presentation" id="9vZ-qB-XMz"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
@@ -94,6 +101,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xwo-hz-xDs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1986" y="803"/>
+        </scene>
+        <!--SheetWorkoutAdd-->
+        <scene sceneID="utP-Pw-T1m">
+            <objects>
+                <viewControllerPlaceholder storyboardName="SheetWorkoutAdd" id="SDE-bu-IOt" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Gr3-9o-kMf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3472" y="518"/>
+        </scene>
+        <!--WorkoutInfo-->
+        <scene sceneID="Br1-aC-hME">
+            <objects>
+                <viewControllerPlaceholder storyboardName="WorkoutInfo" id="9lf-hA-H0S" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="5hp-wg-R5b"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7NK-Zu-1qV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3514" y="816"/>
         </scene>
     </scenes>
     <resources>

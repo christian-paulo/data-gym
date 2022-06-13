@@ -9,22 +9,21 @@
 /* Begin PBXBuildFile section */
 		D6B6C5BD2852216F00BEB4A5 /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B6C5BC2852216F00BEB4A5 /* CustomView.swift */; };
 		D6B6C5C0285221A400BEB4A5 /* CustomView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6B6C5BF285221A400BEB4A5 /* CustomView.xib */; };
-		D6B6C5C528536ECE00BEB4A5 /* ClassesInicialScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6B6C5C428536ECE00BEB4A5 /* ClassesInicialScreen.storyboard */; };
-		D6B6C5C728536EF000BEB4A5 /* ClassesInicialScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B6C5C628536EF000BEB4A5 /* ClassesInicialScreen.swift */; };
-		D6B6C5CB285370E500BEB4A5 /* TurmasInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B6C5CA285370E500BEB4A5 /* TurmasInfo.swift */; };
-		D6B6C5CD285370FB00BEB4A5 /* TurmasInfo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6B6C5CC285370FB00BEB4A5 /* TurmasInfo.storyboard */; };
+		D6B6C5C528536ECE00BEB4A5 /* ClassesInitialScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6B6C5C428536ECE00BEB4A5 /* ClassesInitialScreen.storyboard */; };
+		D6B6C5C728536EF000BEB4A5 /* ClassesInitialScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B6C5C628536EF000BEB4A5 /* ClassesInitialScreen.swift */; };
+		D6B6C5CB285370E500BEB4A5 /* ClassesInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B6C5CA285370E500BEB4A5 /* ClassesInfo.swift */; };
+		D6B6C5CD285370FB00BEB4A5 /* ClassesInfo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6B6C5CC285370FB00BEB4A5 /* ClassesInfo.storyboard */; };
 		D6B6C5D2285371C400BEB4A5 /* WorkoutInitialScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6B6C5D1285371C400BEB4A5 /* WorkoutInitialScreen.storyboard */; };
-		D6B6C5D4285371D500BEB4A5 /* TreinoInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B6C5D3285371D500BEB4A5 /* TreinoInfo.swift */; };
+		D6B6C5D4285371D500BEB4A5 /* SheetWorkoutAdd.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B6C5D3285371D500BEB4A5 /* SheetWorkoutAdd.swift */; };
 		D6B6C5D62853721100BEB4A5 /* WorkoutInitialScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B6C5D52853721100BEB4A5 /* WorkoutInitialScreen.swift */; };
-		D6B6C5D82853723100BEB4A5 /* TreinoInfo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6B6C5D72853723100BEB4A5 /* TreinoInfo.storyboard */; };
-		D6B6C5DD28537ACA00BEB4A5 /* ExercicioInitialScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6B6C5DC28537ACA00BEB4A5 /* ExercicioInitialScreen.storyboard */; };
-		D6B6C5DF28537AD800BEB4A5 /* ExercicioInitialScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B6C5DE28537AD800BEB4A5 /* ExercicioInitialScreen.swift */; };
-		D6B6C5E128537AEA00BEB4A5 /* ExercicioDetailScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B6C5E028537AEA00BEB4A5 /* ExercicioDetailScreen.swift */; };
-		D6B6C5E328537B1E00BEB4A5 /* ExercicioDetailScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6B6C5E228537B1E00BEB4A5 /* ExercicioDetailScreen.storyboard */; };
+		D6B6C5DD28537ACA00BEB4A5 /* ExercisesInitialScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6B6C5DC28537ACA00BEB4A5 /* ExercisesInitialScreen.storyboard */; };
+		D6B6C5DF28537AD800BEB4A5 /* ExercisesInitialScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B6C5DE28537AD800BEB4A5 /* ExercisesInitialScreen.swift */; };
+		D6B6C5E128537AEA00BEB4A5 /* ExercisesDetailScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B6C5E028537AEA00BEB4A5 /* ExercisesDetailScreen.swift */; };
+		D6B6C5E328537B1E00BEB4A5 /* ExercisesDetailScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6B6C5E228537B1E00BEB4A5 /* ExercisesDetailScreen.storyboard */; };
 		D6B6C5E828538D7C00BEB4A5 /* SheetExercInfo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6B6C5E728538D7C00BEB4A5 /* SheetExercInfo.storyboard */; };
 		D6B6C5EA28538D9300BEB4A5 /* SheetExercInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B6C5E928538D9300BEB4A5 /* SheetExercInfo.swift */; };
-		D6B6C5EC28538DC500BEB4A5 /* SheetNomeTurma.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B6C5EB28538DC500BEB4A5 /* SheetNomeTurma.swift */; };
-		D6B6C5EE28538DDA00BEB4A5 /* SheetNomeTurma.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6B6C5ED28538DDA00BEB4A5 /* SheetNomeTurma.storyboard */; };
+		D6B6C5EC28538DC500BEB4A5 /* SheetClassName.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B6C5EB28538DC500BEB4A5 /* SheetClassName.swift */; };
+		D6B6C5EE28538DDA00BEB4A5 /* SheetClassName.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6B6C5ED28538DDA00BEB4A5 /* SheetClassName.storyboard */; };
 		D6B6C5F128538E8F00BEB4A5 /* WorkoutInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B6C5F028538E8F00BEB4A5 /* WorkoutInfo.swift */; };
 		D6B6C5F328538EA000BEB4A5 /* WorkoutInfo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6B6C5F228538EA000BEB4A5 /* WorkoutInfo.storyboard */; };
 		D6B6C5F628538EF700BEB4A5 /* ClassesAddScreens.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6B6C5F528538EF700BEB4A5 /* ClassesAddScreens.storyboard */; };
@@ -33,6 +32,7 @@
 		D6B6C5FF2853911000BEB4A5 /* AddStudent.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B6C5FE2853911000BEB4A5 /* AddStudent.swift */; };
 		D6B6C6012853912600BEB4A5 /* StudentInfo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6B6C6002853912600BEB4A5 /* StudentInfo.storyboard */; };
 		D6B6C6032853913A00BEB4A5 /* StudentInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B6C6022853913A00BEB4A5 /* StudentInfo.swift */; };
+		D6B6C6052853C77100BEB4A5 /* SheetWorkoutAdd.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6B6C6042853C77100BEB4A5 /* SheetWorkoutAdd.storyboard */; };
 		ED2111C328430C17001D6CAE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2111C228430C17001D6CAE /* AppDelegate.swift */; };
 		ED2111C528430C17001D6CAE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2111C428430C17001D6CAE /* SceneDelegate.swift */; };
 		ED2111C728430C17001D6CAE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2111C628430C17001D6CAE /* ViewController.swift */; };
@@ -65,22 +65,21 @@
 /* Begin PBXFileReference section */
 		D6B6C5BC2852216F00BEB4A5 /* CustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
 		D6B6C5BF285221A400BEB4A5 /* CustomView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomView.xib; sourceTree = "<group>"; };
-		D6B6C5C428536ECE00BEB4A5 /* ClassesInicialScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ClassesInicialScreen.storyboard; sourceTree = "<group>"; };
-		D6B6C5C628536EF000BEB4A5 /* ClassesInicialScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassesInicialScreen.swift; sourceTree = "<group>"; };
-		D6B6C5CA285370E500BEB4A5 /* TurmasInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TurmasInfo.swift; sourceTree = "<group>"; };
-		D6B6C5CC285370FB00BEB4A5 /* TurmasInfo.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TurmasInfo.storyboard; sourceTree = "<group>"; };
+		D6B6C5C428536ECE00BEB4A5 /* ClassesInitialScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ClassesInitialScreen.storyboard; sourceTree = "<group>"; };
+		D6B6C5C628536EF000BEB4A5 /* ClassesInitialScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassesInitialScreen.swift; sourceTree = "<group>"; };
+		D6B6C5CA285370E500BEB4A5 /* ClassesInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassesInfo.swift; sourceTree = "<group>"; };
+		D6B6C5CC285370FB00BEB4A5 /* ClassesInfo.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ClassesInfo.storyboard; sourceTree = "<group>"; };
 		D6B6C5D1285371C400BEB4A5 /* WorkoutInitialScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WorkoutInitialScreen.storyboard; sourceTree = "<group>"; };
-		D6B6C5D3285371D500BEB4A5 /* TreinoInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreinoInfo.swift; sourceTree = "<group>"; };
+		D6B6C5D3285371D500BEB4A5 /* SheetWorkoutAdd.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetWorkoutAdd.swift; sourceTree = "<group>"; };
 		D6B6C5D52853721100BEB4A5 /* WorkoutInitialScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutInitialScreen.swift; sourceTree = "<group>"; };
-		D6B6C5D72853723100BEB4A5 /* TreinoInfo.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TreinoInfo.storyboard; sourceTree = "<group>"; };
-		D6B6C5DC28537ACA00BEB4A5 /* ExercicioInitialScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ExercicioInitialScreen.storyboard; sourceTree = "<group>"; };
-		D6B6C5DE28537AD800BEB4A5 /* ExercicioInitialScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExercicioInitialScreen.swift; sourceTree = "<group>"; };
-		D6B6C5E028537AEA00BEB4A5 /* ExercicioDetailScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExercicioDetailScreen.swift; sourceTree = "<group>"; };
-		D6B6C5E228537B1E00BEB4A5 /* ExercicioDetailScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ExercicioDetailScreen.storyboard; sourceTree = "<group>"; };
+		D6B6C5DC28537ACA00BEB4A5 /* ExercisesInitialScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ExercisesInitialScreen.storyboard; sourceTree = "<group>"; };
+		D6B6C5DE28537AD800BEB4A5 /* ExercisesInitialScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExercisesInitialScreen.swift; sourceTree = "<group>"; };
+		D6B6C5E028537AEA00BEB4A5 /* ExercisesDetailScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExercisesDetailScreen.swift; sourceTree = "<group>"; };
+		D6B6C5E228537B1E00BEB4A5 /* ExercisesDetailScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ExercisesDetailScreen.storyboard; sourceTree = "<group>"; };
 		D6B6C5E728538D7C00BEB4A5 /* SheetExercInfo.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SheetExercInfo.storyboard; sourceTree = "<group>"; };
 		D6B6C5E928538D9300BEB4A5 /* SheetExercInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetExercInfo.swift; sourceTree = "<group>"; };
-		D6B6C5EB28538DC500BEB4A5 /* SheetNomeTurma.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetNomeTurma.swift; sourceTree = "<group>"; };
-		D6B6C5ED28538DDA00BEB4A5 /* SheetNomeTurma.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SheetNomeTurma.storyboard; sourceTree = "<group>"; };
+		D6B6C5EB28538DC500BEB4A5 /* SheetClassName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetClassName.swift; sourceTree = "<group>"; };
+		D6B6C5ED28538DDA00BEB4A5 /* SheetClassName.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SheetClassName.storyboard; sourceTree = "<group>"; };
 		D6B6C5F028538E8F00BEB4A5 /* WorkoutInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutInfo.swift; sourceTree = "<group>"; };
 		D6B6C5F228538EA000BEB4A5 /* WorkoutInfo.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WorkoutInfo.storyboard; sourceTree = "<group>"; };
 		D6B6C5F528538EF700BEB4A5 /* ClassesAddScreens.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ClassesAddScreens.storyboard; sourceTree = "<group>"; };
@@ -89,6 +88,7 @@
 		D6B6C5FE2853911000BEB4A5 /* AddStudent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddStudent.swift; sourceTree = "<group>"; };
 		D6B6C6002853912600BEB4A5 /* StudentInfo.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = StudentInfo.storyboard; sourceTree = "<group>"; };
 		D6B6C6022853913A00BEB4A5 /* StudentInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentInfo.swift; sourceTree = "<group>"; };
+		D6B6C6042853C77100BEB4A5 /* SheetWorkoutAdd.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SheetWorkoutAdd.storyboard; sourceTree = "<group>"; };
 		ED2111BF28430C17001D6CAE /* DataGym.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DataGym.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED2111C228430C17001D6CAE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ED2111C428430C17001D6CAE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -144,7 +144,7 @@
 			children = (
 				D6B6C5FB285390E000BEB4A5 /* StudentInfo */,
 				D6B6C5FA285390D800BEB4A5 /* AddStudent */,
-				D6B6C5F92853908800BEB4A5 /* TurmasInfo */,
+				D6B6C5F92853908800BEB4A5 /* ClassesInfo */,
 			);
 			path = ClassesDetailScreens;
 			sourceTree = "<group>";
@@ -153,7 +153,7 @@
 			isa = PBXGroup;
 			children = (
 				D6B6C5F428538EDF00BEB4A5 /* ClassesAddScreens */,
-				D6B6C5C9285370BB00BEB4A5 /* ClassesInicialScreens */,
+				D6B6C5C9285370BB00BEB4A5 /* ClassesInitialScreens */,
 				D6B6C5C228536E2300BEB4A5 /* ClassesDetailScreens */,
 			);
 			path = ClassesFlowScreens;
@@ -162,20 +162,20 @@
 		D6B6C5C82853701F00BEB4A5 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
-				D6B6C5D928537A6F00BEB4A5 /* ExercisesFlowScreens */,
 				D6B6C5CE2853715D00BEB4A5 /* WorkoutFlowScreens */,
+				D6B6C5D928537A6F00BEB4A5 /* ExercisesFlowScreens */,
 				D6B6C5C328536EA500BEB4A5 /* ClassesFlowScreens */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
 		};
-		D6B6C5C9285370BB00BEB4A5 /* ClassesInicialScreens */ = {
+		D6B6C5C9285370BB00BEB4A5 /* ClassesInitialScreens */ = {
 			isa = PBXGroup;
 			children = (
-				D6B6C5C428536ECE00BEB4A5 /* ClassesInicialScreen.storyboard */,
-				D6B6C5C628536EF000BEB4A5 /* ClassesInicialScreen.swift */,
+				D6B6C5C428536ECE00BEB4A5 /* ClassesInitialScreen.storyboard */,
+				D6B6C5C628536EF000BEB4A5 /* ClassesInitialScreen.swift */,
 			);
-			path = ClassesInicialScreens;
+			path = ClassesInitialScreens;
 			sourceTree = "<group>";
 		};
 		D6B6C5CE2853715D00BEB4A5 /* WorkoutFlowScreens */ = {
@@ -219,8 +219,8 @@
 		D6B6C5DA28537A8B00BEB4A5 /* ExercisesInitialScreen */ = {
 			isa = PBXGroup;
 			children = (
-				D6B6C5DC28537ACA00BEB4A5 /* ExercicioInitialScreen.storyboard */,
-				D6B6C5DE28537AD800BEB4A5 /* ExercicioInitialScreen.swift */,
+				D6B6C5DC28537ACA00BEB4A5 /* ExercisesInitialScreen.storyboard */,
+				D6B6C5DE28537AD800BEB4A5 /* ExercisesInitialScreen.swift */,
 			);
 			path = ExercisesInitialScreen;
 			sourceTree = "<group>";
@@ -228,8 +228,8 @@
 		D6B6C5DB28537AA100BEB4A5 /* ExercisesDetailScreen */ = {
 			isa = PBXGroup;
 			children = (
-				D6B6C5E028537AEA00BEB4A5 /* ExercicioDetailScreen.swift */,
-				D6B6C5E228537B1E00BEB4A5 /* ExercicioDetailScreen.storyboard */,
+				D6B6C5E028537AEA00BEB4A5 /* ExercisesDetailScreen.swift */,
+				D6B6C5E228537B1E00BEB4A5 /* ExercisesDetailScreen.storyboard */,
 			);
 			path = ExercisesDetailScreen;
 			sourceTree = "<group>";
@@ -237,8 +237,8 @@
 		D6B6C5E428538C1F00BEB4A5 /* SheetWorkoutAdd */ = {
 			isa = PBXGroup;
 			children = (
-				D6B6C5D3285371D500BEB4A5 /* TreinoInfo.swift */,
-				D6B6C5D72853723100BEB4A5 /* TreinoInfo.storyboard */,
+				D6B6C5D3285371D500BEB4A5 /* SheetWorkoutAdd.swift */,
+				D6B6C6042853C77100BEB4A5 /* SheetWorkoutAdd.storyboard */,
 			);
 			path = SheetWorkoutAdd;
 			sourceTree = "<group>";
@@ -246,8 +246,8 @@
 		D6B6C5E528538C3200BEB4A5 /* SheetClassName */ = {
 			isa = PBXGroup;
 			children = (
-				D6B6C5EB28538DC500BEB4A5 /* SheetNomeTurma.swift */,
-				D6B6C5ED28538DDA00BEB4A5 /* SheetNomeTurma.storyboard */,
+				D6B6C5EB28538DC500BEB4A5 /* SheetClassName.swift */,
+				D6B6C5ED28538DDA00BEB4A5 /* SheetClassName.storyboard */,
 			);
 			path = SheetClassName;
 			sourceTree = "<group>";
@@ -279,13 +279,13 @@
 			path = ClassesAddScreens;
 			sourceTree = "<group>";
 		};
-		D6B6C5F92853908800BEB4A5 /* TurmasInfo */ = {
+		D6B6C5F92853908800BEB4A5 /* ClassesInfo */ = {
 			isa = PBXGroup;
 			children = (
-				D6B6C5CA285370E500BEB4A5 /* TurmasInfo.swift */,
-				D6B6C5CC285370FB00BEB4A5 /* TurmasInfo.storyboard */,
+				D6B6C5CA285370E500BEB4A5 /* ClassesInfo.swift */,
+				D6B6C5CC285370FB00BEB4A5 /* ClassesInfo.storyboard */,
 			);
-			path = TurmasInfo;
+			path = ClassesInfo;
 			sourceTree = "<group>";
 		};
 		D6B6C5FA285390D800BEB4A5 /* AddStudent */ = {
@@ -465,22 +465,22 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D6B6C5D82853723100BEB4A5 /* TreinoInfo.storyboard in Resources */,
 				ED2111D228430C19001D6CAE /* LaunchScreen.storyboard in Resources */,
-				D6B6C5C528536ECE00BEB4A5 /* ClassesInicialScreen.storyboard in Resources */,
+				D6B6C5C528536ECE00BEB4A5 /* ClassesInitialScreen.storyboard in Resources */,
 				D6B6C5D2285371C400BEB4A5 /* WorkoutInitialScreen.storyboard in Resources */,
 				D6B6C5F628538EF700BEB4A5 /* ClassesAddScreens.storyboard in Resources */,
-				D6B6C5E328537B1E00BEB4A5 /* ExercicioDetailScreen.storyboard in Resources */,
+				D6B6C5E328537B1E00BEB4A5 /* ExercisesDetailScreen.storyboard in Resources */,
 				D6B6C6012853912600BEB4A5 /* StudentInfo.storyboard in Resources */,
 				D6B6C5E828538D7C00BEB4A5 /* SheetExercInfo.storyboard in Resources */,
 				D6B6C5C0285221A400BEB4A5 /* CustomView.xib in Resources */,
-				D6B6C5CD285370FB00BEB4A5 /* TurmasInfo.storyboard in Resources */,
+				D6B6C5CD285370FB00BEB4A5 /* ClassesInfo.storyboard in Resources */,
 				D6B6C5F328538EA000BEB4A5 /* WorkoutInfo.storyboard in Resources */,
 				ED2111CF28430C19001D6CAE /* Assets.xcassets in Resources */,
-				D6B6C5EE28538DDA00BEB4A5 /* SheetNomeTurma.storyboard in Resources */,
+				D6B6C5EE28538DDA00BEB4A5 /* SheetClassName.storyboard in Resources */,
 				D6B6C5FD2853910100BEB4A5 /* AddStudent.storyboard in Resources */,
 				ED2111CA28430C17001D6CAE /* Main.storyboard in Resources */,
-				D6B6C5DD28537ACA00BEB4A5 /* ExercicioInitialScreen.storyboard in Resources */,
+				D6B6C6052853C77100BEB4A5 /* SheetWorkoutAdd.storyboard in Resources */,
+				D6B6C5DD28537ACA00BEB4A5 /* ExercisesInitialScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -528,20 +528,20 @@
 				D6B6C5BD2852216F00BEB4A5 /* CustomView.swift in Sources */,
 				D6B6C5FF2853911000BEB4A5 /* AddStudent.swift in Sources */,
 				ED2111C728430C17001D6CAE /* ViewController.swift in Sources */,
-				D6B6C5CB285370E500BEB4A5 /* TurmasInfo.swift in Sources */,
+				D6B6C5CB285370E500BEB4A5 /* ClassesInfo.swift in Sources */,
 				ED2111C328430C17001D6CAE /* AppDelegate.swift in Sources */,
-				D6B6C5DF28537AD800BEB4A5 /* ExercicioInitialScreen.swift in Sources */,
-				D6B6C5C728536EF000BEB4A5 /* ClassesInicialScreen.swift in Sources */,
+				D6B6C5DF28537AD800BEB4A5 /* ExercisesInitialScreen.swift in Sources */,
+				D6B6C5C728536EF000BEB4A5 /* ClassesInitialScreen.swift in Sources */,
 				D6B6C6032853913A00BEB4A5 /* StudentInfo.swift in Sources */,
 				D6B6C5F828538F0900BEB4A5 /* ClassesAddScreens.swift in Sources */,
 				D6B6C5D62853721100BEB4A5 /* WorkoutInitialScreen.swift in Sources */,
 				D6B6C5EA28538D9300BEB4A5 /* SheetExercInfo.swift in Sources */,
-				D6B6C5E128537AEA00BEB4A5 /* ExercicioDetailScreen.swift in Sources */,
+				D6B6C5E128537AEA00BEB4A5 /* ExercisesDetailScreen.swift in Sources */,
 				ED2111C528430C17001D6CAE /* SceneDelegate.swift in Sources */,
 				D6B6C5F128538E8F00BEB4A5 /* WorkoutInfo.swift in Sources */,
 				ED2111CD28430C17001D6CAE /* DataGym.xcdatamodeld in Sources */,
-				D6B6C5D4285371D500BEB4A5 /* TreinoInfo.swift in Sources */,
-				D6B6C5EC28538DC500BEB4A5 /* SheetNomeTurma.swift in Sources */,
+				D6B6C5D4285371D500BEB4A5 /* SheetWorkoutAdd.swift in Sources */,
+				D6B6C5EC28538DC500BEB4A5 /* SheetClassName.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

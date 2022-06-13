@@ -1,5 +1,5 @@
 //
-//  TreinoDetailScreen.swift
+//  TurmasDetailScreen.swift
 //  DataGym
 //
 //  Created by Ieda Xavier on 10/06/22.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class TreinoInfo: UIView {
+class ClassesInfo: UINavigationController{
 
     /*
     // Only override draw() if you perform custom drawing.

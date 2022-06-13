@@ -1,5 +1,5 @@
 //
-//  SheetNomeTurma.swift
+//  TreinoDetailScreen.swift
 //  DataGym
 //
 //  Created by Ieda Xavier on 10/06/22.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class SheetNomeTurma: UIView {
+class SheetWorkoutAdd: UINavigationController {
 
     /*
     // Only override draw() if you perform custom drawing.

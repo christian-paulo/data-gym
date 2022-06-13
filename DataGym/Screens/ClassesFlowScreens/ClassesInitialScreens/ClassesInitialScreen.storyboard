@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="8tb-74-2DY">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
@@ -24,13 +24,8 @@
                                 <rect key="frame" x="0.0" y="122" width="414" height="666"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <view key="tableFooterView" contentMode="scaleToFill" id="i71-xr-so6" customClass="CustomView" customModule="DataGym" customModuleProvider="target">
-                                    <rect key="frame" x="0.0" y="135" width="414" height="55"/>
-                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                </view>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="nomeAlunos" rowHeight="68" id="ZhN-ld-0pw">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="nomeAlunos" rowHeight="68" id="ZhN-ld-0pw">
                                         <rect key="frame" x="0.0" y="44.5" width="414" height="68"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ZhN-ld-0pw" id="uHW-qp-nhg">
@@ -85,8 +80,14 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="hoy-x0-oAu" kind="show" id="oaa-xe-fJC"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="bcW-rP-FZu" id="3zL-jQ-ljq"/>
+                                </connections>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Turmas" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zaO-Fj-NcY">
                                 <rect key="frame" x="20" y="88" width="65" height="33"/>
@@ -100,7 +101,11 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="87u-gu-wPk">
-                        <barButtonItem key="rightBarButtonItem" image="plus" catalog="system" id="X7h-bV-wc7"/>
+                        <barButtonItem key="rightBarButtonItem" image="plus" catalog="system" id="X7h-bV-wc7">
+                            <connections>
+                                <segue destination="sNQ-96-J5u" kind="presentation" id="ROa-kv-z24"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Vq-Qc-vKU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -125,6 +130,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="N9k-l6-t5a" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1726" y="-889"/>
+        </scene>
+        <!--ClassesAddScreens-->
+        <scene sceneID="nfx-wV-jjT">
+            <objects>
+                <viewControllerPlaceholder id="sNQ-96-J5u" userLabel="ClassesAddScreens" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Njw-6R-LNu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3220" y="-1139"/>
+        </scene>
+        <!--ClassesInfo-->
+        <scene sceneID="NeQ-kw-BT1">
+            <objects>
+                <viewControllerPlaceholder id="hoy-x0-oAu" userLabel="ClassesInfo" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="Y6N-Lh-wlT"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hAH-EW-NYQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3328" y="-875"/>
         </scene>
     </scenes>
     <resources>

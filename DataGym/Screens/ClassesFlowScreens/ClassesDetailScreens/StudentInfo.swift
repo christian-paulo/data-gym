@@ -7,7 +7,7 @@
 
 import UIKit
 
-class AlunoInfo: UIView {
+class StudentInfo: UIView {
 
     /*
     // Only override draw() if you perform custom drawing.
