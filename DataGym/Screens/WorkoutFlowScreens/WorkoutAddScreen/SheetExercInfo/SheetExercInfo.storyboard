@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Sheet Exerc Info-->
         <scene sceneID="LRa-yZ-K5d">
             <objects>
-                <viewController id="3lL-Ac-Eu3" sceneMemberID="viewController">
+                <viewController id="3lL-Ac-Eu3" customClass="SheetExercInfo" customModule="DataGym" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="2mD-2C-jd1"/>
                         <viewControllerLayoutGuide type="bottom" id="YyP-37-RI3"/>

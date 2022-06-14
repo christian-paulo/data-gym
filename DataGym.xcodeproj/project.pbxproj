@@ -133,8 +133,7 @@
 		D6B6C5BB2852213E00BEB4A5 /* CustomComponent */ = {
 			isa = PBXGroup;
 			children = (
-				D6B6C5BC2852216F00BEB4A5 /* CustomView.swift */,
-				D6B6C5BF285221A400BEB4A5 /* CustomView.xib */,
+				D6B8B1EB2858D89800CE73D7 /* TableTurmas */,
 			);
 			path = CustomComponent;
 			sourceTree = "<group>";
@@ -304,6 +303,15 @@
 				D6B6C6022853913A00BEB4A5 /* StudentInfo.swift */,
 			);
 			name = StudentInfo;
+			sourceTree = "<group>";
+		};
+		D6B8B1EB2858D89800CE73D7 /* TableTurmas */ = {
+			isa = PBXGroup;
+			children = (
+				D6B6C5BC2852216F00BEB4A5 /* CustomView.swift */,
+				D6B6C5BF285221A400BEB4A5 /* CustomView.xib */,
+			);
+			path = TableTurmas;
 			sourceTree = "<group>";
 		};
 		ED2111B628430C17001D6CAE = {

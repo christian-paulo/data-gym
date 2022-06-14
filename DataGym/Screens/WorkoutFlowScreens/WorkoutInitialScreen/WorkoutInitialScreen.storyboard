@@ -20,15 +20,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="treino" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="c8X-EL-rYp">
-                                <rect key="frame" x="0.0" y="319" width="414" height="474"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" estimatedSectionHeaderHeight="-1" sectionFooterHeight="28" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="c8X-EL-rYp">
+                                <rect key="frame" x="0.0" y="194" width="414" height="599"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="nomeTreinos" rowHeight="62" id="3Ke-tp-8YX">
                                         <rect key="frame" x="0.0" y="44.5" width="414" height="62"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="nomeTreino" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="3Ke-tp-8YX" id="Mza-7U-kI6">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="3Ke-tp-8YX" id="Mza-7U-kI6">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="62"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
@@ -54,7 +53,7 @@
                                         </tableViewCellContentView>
                                         <color key="tintColor" red="0.0" green="0.74901960779999999" blue="0.65098039220000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <connections>
-                                            <segue destination="9lf-hA-H0S" kind="show" identifier="WorkoutInfo" destinationCreationSelector="WorkoutInfo" customClass="WorkoutInfo" customModule="DataGym" customModuleProvider="target" id="n6K-aU-mER"/>
+                                            <segue destination="40k-sX-pjh" kind="show" id="iB6-b3-H8X"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -69,18 +68,23 @@
                         <barButtonItem key="rightBarButtonItem" image="plus" catalog="system" id="lOI-WC-0S1">
                             <color key="tintColor" red="0.0" green="0.74901960779999999" blue="0.65098039220000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             <connections>
-                                <segue destination="SDE-bu-IOt" kind="presentation" identifier="SheetWorkoutAdd" destinationCreationSelector="SheetWorkoutAdd" customClass="SheetWorkoutAdd" customModule="DataGym" id="9vZ-qB-XMz"/>
+                                <segue destination="o1C-8L-tOe" kind="presentation" id="DmK-zU-1cX"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
-                    <connections>
-                        <outlet property="tableview" destination="c8X-EL-rYp" id="CrR-zX-aEA"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TW0-C0-OVY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2892.753623188406" y="802.90178571428567"/>
+        </scene>
+        <!--SheetWorkoutAdd-->
+        <scene sceneID="nsD-GE-MEY">
+            <objects>
+                <viewControllerPlaceholder storyboardName="SheetWorkoutAdd" id="o1C-8L-tOe" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="98z-AS-Bdd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3492" y="579"/>
         </scene>
         <!--Treinos-->
         <scene sceneID="enb-xQ-PxR">
@@ -106,23 +110,15 @@
             </objects>
             <point key="canvasLocation" x="1986" y="803"/>
         </scene>
-        <!--SheetWorkoutAdd-->
-        <scene sceneID="utP-Pw-T1m">
-            <objects>
-                <viewControllerPlaceholder storyboardIdentifier="SheetWorkoutAdd" storyboardName="SheetWorkoutAdd" referencedIdentifier="SheetWorkoutAdd" id="SDE-bu-IOt" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Gr3-9o-kMf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3472" y="518"/>
-        </scene>
         <!--WorkoutInfo-->
-        <scene sceneID="Br1-aC-hME">
+        <scene sceneID="Id8-1B-J6S">
             <objects>
-                <viewControllerPlaceholder storyboardIdentifier="WorkoutInfo" storyboardName="WorkoutInfo" referencedIdentifier="WorkoutInfo" id="9lf-hA-H0S" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="5hp-wg-R5b"/>
+                <viewControllerPlaceholder storyboardName="WorkoutInfo" id="40k-sX-pjh" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="1GX-jK-HeW"/>
                 </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="7NK-Zu-1qV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4Gw-w1-gmT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3518" y="819"/>
+            <point key="canvasLocation" x="3492" y="816"/>
         </scene>
     </scenes>
     <resources>

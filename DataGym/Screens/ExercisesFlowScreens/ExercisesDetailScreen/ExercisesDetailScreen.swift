@@ -7,6 +7,4 @@
 
 import UIKit
 
-class ExercisesDetailScreen: UIViewController{
-    
-}
+class ExercisesDetailScreen: UIViewController{}

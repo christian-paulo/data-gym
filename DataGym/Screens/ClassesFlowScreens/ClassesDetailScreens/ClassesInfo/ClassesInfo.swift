@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ClassesInfo: UINavigationController{
+class ClassesInfo: UINavigationController {
 
     /*
     // Only override draw() if you perform custom drawing.

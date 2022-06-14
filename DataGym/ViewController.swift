@@ -9,42 +9,26 @@ import UIKit
 import CoreData
 
 class ViewController: UIViewController {
-      
     @IBOutlet var tableView: UITableView!
-    
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-    
     var items: [Class]?
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         tableView.delegate = self
         tableView.dataSource = self
-        
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "ClassCell")
-
-        
         fetchClass()
     }
-    
     func fetchClass() {
         do {
             self.items = try context.fetch(Class.fetchRequest())
-            
             DispatchQueue.main.async {
                 self.tableView.reloadData()
             }
+        } catch {
         }
-        catch {
-            
-        }
-        
     }
-    
-       @IBAction func addTapped(sender: Any){
-           
-    
+       @IBAction func addTapped(sender: Any) {
         let alert = UIAlertController(title: "Add Class", message: "Whats ir their name?", preferredStyle: .alert)
         alert.addTextField()
 
@@ -64,10 +48,9 @@ class ViewController: UIViewController {
 
             //TODO: save to data
 
-            do{
+            do {
                 try self.context.save()
-            }
-            catch{
+            } catch {
 
             }
             //re-fecth the data
@@ -78,12 +61,8 @@ class ViewController: UIViewController {
 
         let cancelButton = UIAlertAction(title: "Cancel", style: .cancel) {
             (action) in
-
             self.fetchClass()
-
         }
-
-
         alert.addAction((submitButton))
         alert.addAction((cancelButton))
 
@@ -92,25 +71,19 @@ class ViewController: UIViewController {
     }
 }
 
-
-extension ViewController: UITableViewDelegate, UITableViewDataSource{
-    
+extension ViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
-        
         let action = UIContextualAction(style: .destructive, title: "Delete") { (action,
                                                                                  view, completionHandler) in
             
             //TODO: WHICH CLASS TO REMOVE
             let classToRemove =  self.items![indexPath.row]
-            
             //TODO: REMOVE THE CLASS
             self.context.delete(classToRemove)
-            
             //TODO: SAVE THE DATA
             do {
                 try self.context.save()
-            }
-            catch {
+            } catch {
                 
             }
             
@@ -125,13 +98,10 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource{
         return self.items?.count ?? 0
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "ClassCell", for:indexPath)
-        
         let classe = self.items![indexPath.row]
-        
-        
         cell.textLabel?.text = classe.name
         return cell
     }
@@ -139,13 +109,11 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource{
     func tableView (_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         let classe = self.items![indexPath.row]
-        
         let alert = UIAlertController(title: "Edit Person", message: "Edit name: ", preferredStyle: .alert)
         alert.addTextField()
 
         let textfield = alert.textFields![0]
         textfield.text = classe.name
-  
         let saveButton = UIAlertAction(title: "Save", style: .default) { (action) in
             
             //GET THE TEXTFIELD FOR THE ALERT
@@ -174,8 +142,3 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource{
         self.present(alert, animated: true, completion: nil)
     }
 }
-
-
-
-
-

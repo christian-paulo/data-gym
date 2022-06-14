@@ -6,6 +6,4 @@
 //
 import UIKit
 
-class ExercisesInitialScreen: UIViewController{
-    
-}
+class ExercisesInitialScreen: UIViewController { }
