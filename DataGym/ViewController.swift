@@ -42,7 +42,7 @@ class ViewController: UIViewController {
         
     }
     
-       @IBAction func addTapped(_sender: Any){
+       @IBAction func addTapped(sender: Any){
            
     
         let alert = UIAlertController(title: "Add Class", message: "Whats ir their name?", preferredStyle: .alert)

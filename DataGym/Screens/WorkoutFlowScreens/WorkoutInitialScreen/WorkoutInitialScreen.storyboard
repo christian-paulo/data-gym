@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Workout Initial Screen-->
         <scene sceneID="u8O-6L-BLl">
             <objects>
-                <viewController id="tcv-M1-sq2" sceneMemberID="viewController">
+                <viewController id="tcv-M1-sq2" customClass="WorkoutInitialScreen" customModule="DataGym" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="vMR-QM-CtN"/>
                         <viewControllerLayoutGuide type="bottom" id="EOW-hs-RsO"/>
@@ -21,7 +21,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="treino" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="c8X-EL-rYp">
-                                <rect key="frame" x="0.0" y="120" width="414" height="686"/>
+                                <rect key="frame" x="0.0" y="319" width="414" height="474"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
@@ -52,46 +52,50 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <color key="tintColor" red="0.0" green="0.74901960779999999" blue="0.65098039220000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <connections>
-                                            <segue destination="9lf-hA-H0S" kind="show" id="n6K-aU-mER"/>
+                                            <segue destination="9lf-hA-H0S" kind="show" identifier="WorkoutInfo" destinationCreationSelector="WorkoutInfo" customClass="WorkoutInfo" customModule="DataGym" customModuleProvider="target" id="n6K-aU-mER"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Treinos" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dsz-vg-Pxb">
-                                <rect key="frame" x="32" y="88" width="77" height="33"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="9u8-vQ-Tzw"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="W0I-Y2-9jX">
+                        <barButtonItem key="backBarButtonItem" title="Voltar" id="MNI-Fi-EPZ"/>
                         <barButtonItem key="rightBarButtonItem" image="plus" catalog="system" id="lOI-WC-0S1">
+                            <color key="tintColor" red="0.0" green="0.74901960779999999" blue="0.65098039220000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             <connections>
-                                <segue destination="SDE-bu-IOt" kind="presentation" id="9vZ-qB-XMz"/>
+                                <segue destination="SDE-bu-IOt" kind="presentation" identifier="SheetWorkoutAdd" destinationCreationSelector="SheetWorkoutAdd" customClass="SheetWorkoutAdd" customModule="DataGym" id="9vZ-qB-XMz"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="tableview" destination="c8X-EL-rYp" id="CrR-zX-aEA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TW0-C0-OVY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2894" y="803"/>
+            <point key="canvasLocation" x="2892.753623188406" y="802.90178571428567"/>
         </scene>
-        <!--Exercícios-->
+        <!--Treinos-->
         <scene sceneID="enb-xQ-PxR">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="kdh-aO-2Uk" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Exercícios" id="UMG-H9-rDL"/>
+                <navigationController storyboardIdentifier="WorkoutInitialScreen" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="kdh-aO-2Uk" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Treinos" image="book.fill" catalog="system" id="rQt-cb-ZyW"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="zT3-W9-n6i">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="zT3-W9-n6i">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="0.0" green="0.74901960779999999" blue="0.65098039220000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" systemColor="labelColor"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -105,7 +109,7 @@
         <!--SheetWorkoutAdd-->
         <scene sceneID="utP-Pw-T1m">
             <objects>
-                <viewControllerPlaceholder storyboardName="SheetWorkoutAdd" id="SDE-bu-IOt" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardIdentifier="SheetWorkoutAdd" storyboardName="SheetWorkoutAdd" referencedIdentifier="SheetWorkoutAdd" id="SDE-bu-IOt" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gr3-9o-kMf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3472" y="518"/>
@@ -113,17 +117,21 @@
         <!--WorkoutInfo-->
         <scene sceneID="Br1-aC-hME">
             <objects>
-                <viewControllerPlaceholder storyboardName="WorkoutInfo" id="9lf-hA-H0S" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardIdentifier="WorkoutInfo" storyboardName="WorkoutInfo" referencedIdentifier="WorkoutInfo" id="9lf-hA-H0S" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="5hp-wg-R5b"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7NK-Zu-1qV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3514" y="816"/>
+            <point key="canvasLocation" x="3518" y="819"/>
         </scene>
     </scenes>
     <resources>
+        <image name="book.fill" catalog="system" width="128" height="95"/>
         <image name="chevron.forward" catalog="system" width="96" height="128"/>
         <image name="plus" catalog="system" width="128" height="113"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="opaqueSeparatorColor">
             <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

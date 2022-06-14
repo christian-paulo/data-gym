@@ -367,10 +367,10 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = ED2111EC28430C1A001D6CAE /* Build configuration list for PBXNativeTarget "DataGym" */;
 			buildPhases = (
+				EDFFE6642850C6B70016AA59 /* ShellScript */,
 				ED2111BB28430C17001D6CAE /* Sources */,
 				ED2111BC28430C17001D6CAE /* Frameworks */,
 				ED2111BD28430C17001D6CAE /* Resources */,
-				EDFFE6642850C6B70016AA59 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -516,7 +516,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"warning: Swiftlint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+			shellScript = "export PATH=\"$PATH:/opt/homebrew/bin\"\nif which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"warning: Swiftlint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 

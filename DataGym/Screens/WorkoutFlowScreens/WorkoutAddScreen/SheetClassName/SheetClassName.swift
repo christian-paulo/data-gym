@@ -7,7 +7,7 @@
 
 import UIKit
 
-class SheetClassName: UIView {
+class SheetClassName: UIViewController {
 
     /*
     // Only override draw() if you perform custom drawing.

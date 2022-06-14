@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ClassesAddScreens: UINavigationController{
+class ClassesAddScreens: UIViewController{
 
     /*
     // Only override draw() if you perform custom drawing.

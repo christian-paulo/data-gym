@@ -16,47 +16,44 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="gLT-Cw-OAW" kind="relationship" relationship="viewControllers" id="m2Y-4b-dVt"/>
-                        <segue destination="wFF-4Y-VP1" kind="relationship" relationship="viewControllers" id="0Uo-t0-QVV"/>
-                        <segue destination="dyG-rn-u7P" kind="relationship" relationship="viewControllers" id="bRW-yl-OKq"/>
+                        <segue destination="Fdt-pq-X01" kind="relationship" relationship="viewControllers" id="omw-JG-AEx"/>
+                        <segue destination="BIg-dT-4T7" kind="relationship" relationship="viewControllers" id="LKY-Pd-qCD"/>
+                        <segue destination="sPA-Fb-MdU" kind="relationship" relationship="viewControllers" id="3v6-Lb-EOc"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wIh-i7-mVM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="970" y="-199"/>
         </scene>
-        <!--WorkoutInitialScreen-->
-        <scene sceneID="Lmt-r7-MFu">
-            <objects>
-                <viewControllerPlaceholder storyboardName="WorkoutInitialScreen" id="gLT-Cw-OAW" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="yJn-gk-BaK"/>
-                    <navigationItem key="navigationItem" id="6QT-aX-efn"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Byx-9q-VIa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1602" y="-340"/>
-        </scene>
         <!--ClassesInitialScreen-->
-        <scene sceneID="rh8-Yr-if6">
+        <scene sceneID="R95-C4-psF">
             <objects>
-                <viewControllerPlaceholder storyboardName="ClassesInitialScreen" id="wFF-4Y-VP1" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="cYL-Ag-mUq"/>
-                    <navigationItem key="navigationItem" id="MnV-kI-UMF"/>
+                <viewControllerPlaceholder storyboardName="ClassesInitialScreen" id="Fdt-pq-X01" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="UbV-jw-WIx"/>
                 </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Lv0-pZ-QLm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DxB-Ng-Kqw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1598" y="-40"/>
+            <point key="canvasLocation" x="1608" y="-305"/>
+        </scene>
+        <!--WorkoutInitialScreen-->
+        <scene sceneID="Ggk-vT-cj2">
+            <objects>
+                <viewControllerPlaceholder storyboardName="WorkoutInitialScreen" id="sPA-Fb-MdU" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="Mjp-kK-fZK"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jxb-pb-2IO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1611" y="-96"/>
         </scene>
         <!--ExercisesInitialScreen-->
-        <scene sceneID="pYF-Ho-f4E">
+        <scene sceneID="O6T-Rm-Nv6">
             <objects>
-                <viewControllerPlaceholder storyboardName="ExercisesInitialScreen" id="dyG-rn-u7P" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="g9v-IA-6nt"/>
-                    <navigationItem key="navigationItem" id="A6J-H2-uiY"/>
+                <viewControllerPlaceholder storyboardName="ExercisesInitialScreen" id="BIg-dT-4T7" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="rZ4-Ml-ioM"/>
                 </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="RZc-mv-cfX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pxN-09-hlZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1606" y="-192"/>
+            <point key="canvasLocation" x="1616" y="-200"/>
         </scene>
     </scenes>
 </document>

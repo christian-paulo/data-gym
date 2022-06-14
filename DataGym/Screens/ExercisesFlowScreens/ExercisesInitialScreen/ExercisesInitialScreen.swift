@@ -6,6 +6,6 @@
 //
 import UIKit
 
-class ExercisesInitialScreen: UINavigationController{
+class ExercisesInitialScreen: UIViewController{
     
 }

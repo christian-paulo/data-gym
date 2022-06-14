@@ -28,9 +28,9 @@ class CustomView: UIView {
 
     func initSubviews() {
 
-        let nib = UINib(nibName: CustomView.identifier, bundle: .main)
+        let varNib = UINib(nibName: CustomView.identifier, bundle: .main)
         
-        guard let view = nib.instantiate(withOwner: self, options: nil).first as?
+        guard let view = varNib.instantiate(withOwner: self, options: nil).first as?
                             UIView else {fatalError("Unable to convert nib")}
 
         print(view)

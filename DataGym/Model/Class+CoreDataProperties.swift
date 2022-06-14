@@ -16,10 +16,10 @@ extension Class {
         return NSFetchRequest<Class>(entityName: "Class")
     }
 
-    @NSManaged public var day_week: String?
+    @NSManaged public var dayWeek: String?
     @NSManaged public var hour: String?
     @NSManaged public var name: String?
-    @NSManaged public var semester_school: String?
+    @NSManaged public var semesterSchool: String?
     @NSManaged public var teacher: Teacher?
 
 }
