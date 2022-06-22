@@ -2,7 +2,7 @@
 //  Exercise+CoreDataProperties.swift
 //  DataGym
 //
-//  Created by Narely Lima on 20/06/22.
+//  Created by Ieda Xavier on 22/06/22.
 //
 //
 
@@ -16,10 +16,10 @@ extension Exercise {
         return NSFetchRequest<Exercise>(entityName: "Exercise")
     }
 
-    @NSManaged public var serie: String?
+    @NSManaged public var charge: String?
     @NSManaged public var nameExercise: String?
     @NSManaged public var repetition: String?
-    @NSManaged public var charge: String?
+    @NSManaged public var serie: String?
     @NSManaged public var treinos: WorkOut?
 
 }

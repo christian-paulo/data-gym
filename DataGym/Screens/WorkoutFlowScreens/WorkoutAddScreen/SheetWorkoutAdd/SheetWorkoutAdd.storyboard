@@ -21,24 +21,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="nomeTreino" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vkP-4b-cxL">
-                                <rect key="frame" x="36" y="180" width="330" height="34"/>
-                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Turmas" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YKq-VS-e6t">
-                                <rect key="frame" x="39" y="229" width="57" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Exercícios" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yJK-kG-2hW">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Exercícios" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yJK-kG-2hW">
                                 <rect key="frame" x="39" y="273" width="336" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="lv2-kH-zCt">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="lv2-kH-zCt">
                                 <rect key="frame" x="0.0" y="290" width="414" height="518"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
@@ -96,19 +86,8 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoLight" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gqH-wK-ORd">
-                                <rect key="frame" x="266" y="222" width="128" height="31"/>
-                                <color key="tintColor" red="0.0" green="0.74901960779999999" blue="0.65098039220000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <buttonConfiguration key="configuration" style="plain" title="  nomeTurma"/>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Nome" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1MF-XD-dHG">
-                                <rect key="frame" x="35" y="168.5" width="46" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kpd-57-M7n">
-                                <rect key="frame" x="350" y="268" width="44" height="31"/>
+                                <rect key="frame" x="332" y="268" width="44" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" name="AccentColor"/>
                                 <state key="normal" title="Button"/>
@@ -116,39 +95,45 @@
                                     <color key="baseForegroundColor" systemColor="systemMintColor"/>
                                 </buttonConfiguration>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Nome do Treino" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GUu-VC-8QT">
+                                <rect key="frame" x="39" y="148" width="121" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fld-MX-oC2">
+                                <rect key="frame" x="39" y="175" width="330" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="r9q-rH-GCa"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="lv2-kH-zCt" firstAttribute="centerX" secondItem="F88-uY-73M" secondAttribute="centerX" id="0hP-TB-Z9M"/>
-                            <constraint firstItem="yJK-kG-2hW" firstAttribute="top" secondItem="YKq-VS-e6t" secondAttribute="bottom" constant="23" id="5vL-Iz-NuH"/>
-                            <constraint firstItem="lv2-kH-zCt" firstAttribute="top" secondItem="gqH-wK-ORd" secondAttribute="bottom" constant="35" id="7Ag-gJ-KXA"/>
-                            <constraint firstItem="YKq-VS-e6t" firstAttribute="leading" secondItem="1MF-XD-dHG" secondAttribute="leading" id="BKz-Rw-cle"/>
                             <constraint firstItem="lv2-kH-zCt" firstAttribute="leading" secondItem="r9q-rH-GCa" secondAttribute="leading" id="Fma-qx-SNm"/>
-                            <constraint firstItem="vkP-4b-cxL" firstAttribute="top" secondItem="1MF-XD-dHG" secondAttribute="bottom" constant="5" id="WF9-fG-uI9"/>
-                            <constraint firstItem="YKq-VS-e6t" firstAttribute="leading" secondItem="r9q-rH-GCa" secondAttribute="leading" constant="39" id="b1J-f7-NJ1"/>
-                            <constraint firstItem="r9q-rH-GCa" firstAttribute="trailing" secondItem="gqH-wK-ORd" secondAttribute="trailing" constant="48" id="dnK-TO-ufO"/>
-                            <constraint firstItem="gqH-wK-ORd" firstAttribute="top" secondItem="F88-uY-73M" secondAttribute="top" constant="224" id="hjH-Vg-Ujz"/>
-                            <constraint firstItem="gqH-wK-ORd" firstAttribute="trailing" secondItem="vkP-4b-cxL" secondAttribute="trailing" id="iPG-OZ-XWy"/>
                             <constraint firstItem="pPb-zn-EYI" firstAttribute="top" secondItem="lv2-kH-zCt" secondAttribute="bottom" constant="54" id="ico-v5-wjq"/>
-                            <constraint firstItem="gqH-wK-ORd" firstAttribute="top" secondItem="vkP-4b-cxL" secondAttribute="bottom" constant="11" id="kpO-e8-7rF"/>
-                            <constraint firstItem="YKq-VS-e6t" firstAttribute="leading" secondItem="yJK-kG-2hW" secondAttribute="leading" id="lsP-5c-s5p"/>
-                            <constraint firstItem="gqH-wK-ORd" firstAttribute="centerY" secondItem="YKq-VS-e6t" secondAttribute="centerY" id="tHw-Nc-0Lg"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="ltS-6y-sZM">
-                        <barButtonItem key="leftBarButtonItem" style="plain" systemItem="cancel" id="mFy-0T-mMZ">
-                            <color key="tintColor" red="0.0" green="0.74901960779999999" blue="0.65098039220000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                        </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="done" id="SjH-7e-afq">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="mFy-0T-mMZ">
                             <color key="tintColor" red="0.0" green="0.74901960779999999" blue="0.65098039220000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             <connections>
-                                <action selector="saveButton:" destination="raY-9Y-8JT" id="Fce-Ha-c5W"/>
+                                <action selector="cancelButton:" destination="raY-9Y-8JT" id="JBj-s0-0PY"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="SjH-7e-afq">
+                            <color key="tintColor" red="0.0" green="0.74901960779999999" blue="0.65098039220000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <connections>
+                                <action selector="saveButton:" destination="raY-9Y-8JT" id="gm5-M0-9Ig"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="saveButton" destination="SjH-7e-afq" id="0gM-Ss-aBn"/>
+                        <outlet property="exercises" destination="lv2-kH-zCt" id="nU1-WN-k8S"/>
+                        <outlet property="nameWorkout" destination="fld-MX-oC2" id="SQB-YP-tVl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ryh-gI-vef" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

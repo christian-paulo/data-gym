@@ -11,12 +11,18 @@ import CoreData
 class WorkoutInitialScreen: UIViewController {
     @IBOutlet var tableView: UITableView!
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-    var items: [WorkOut]?
+    
+    var items = [WorkOut]()
+    
     override func viewDidLoad() {
             super.viewDidLoad()
             title = "Treinos"
+        tableView.delegate = self
+        tableView.dataSource = self
+        fetchWorkout()
+        tableView.register(UINib(nibName: "WorkoutCell", bundle: nil), forCellReuseIdentifier: "WorkoutCell")
     }
-    func fetchClass() {
+    func fetchWorkout() {
         do {
             self.items = try context.fetch(WorkOut.fetchRequest())
             DispatchQueue.main.async {
@@ -25,28 +31,46 @@ class WorkoutInitialScreen: UIViewController {
         } catch {
         }
     }
-}
-extension WorkoutInitialScreen: UITableViewDelegate, UITableViewDataSource {
-    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
-        let action = UIContextualAction(style: .destructive, title: "Delete") {
-            (action, view, completionHandler) in
-            let workOutToRemove =  self.items![indexPath.row]
-            self.context.delete(workOutToRemove)
-            do {
-                try self.context.save()
-            } catch {
-            }
-            self.fetchClass()
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let navi = segue.destination as? UINavigationController,
+           let addScreens = navi.topViewController as? SheetWorkoutAdd {
+            addScreens.delegate = self
         }
-        return UISwipeActionsConfiguration(actions: [action])
+        if let workoutInfo = segue.destination as? WorkoutInfo, let workout = sender as? WorkOut {
+            workoutInfo.name = workout
+        }
     }
+}
+
+extension WorkoutInitialScreen: AddScreensDelegateSheet {
+    func createdNewWorkout() {
+        fetchWorkout()
+    }
+}
+
+extension WorkoutInitialScreen: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.items?.count ?? 0
+        return self.items.count
     }
+
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        let currentItem = self.items[indexPath.row]
+        performSegue(withIdentifier: "WorkoutInfo", sender: currentItem)
+
+    }
+
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "WorkOutCell", for:indexPath)
-        let treinos = self.items![indexPath.row]
-        cell.textLabel?.text = treinos.nameWorkOut
+        guard let cell = tableView.dequeueReusableCell(
+            withIdentifier: "WorkoutCell",
+            for: indexPath
+        ) as? WorkoutCell else {
+            return UITableViewCell()
+        }
+
+        let workout = self.items[indexPath.row]
+        print(workout)
+        cell.nomeWorkout.text = workout.nameWorkOut
         return cell
     }
 }

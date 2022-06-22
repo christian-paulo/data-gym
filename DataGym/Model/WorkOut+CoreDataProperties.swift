@@ -2,7 +2,7 @@
 //  WorkOut+CoreDataProperties.swift
 //  DataGym
 //
-//  Created by Narely Lima on 20/06/22.
+//  Created by Ieda Xavier on 22/06/22.
 //
 //
 
@@ -16,8 +16,8 @@ extension WorkOut {
         return NSFetchRequest<WorkOut>(entityName: "WorkOut")
     }
 
-    @NSManaged public var nameWorkOut: String?
     @NSManaged public var exercises: String?
+    @NSManaged public var nameWorkOut: String?
     @NSManaged public var exercicios: Exercise?
 
 }
