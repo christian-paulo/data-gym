@@ -5,6 +5,7 @@
         <attribute name="hour" optional="YES" attributeType="String"/>
         <attribute name="name" optional="YES" attributeType="String"/>
         <attribute name="semesterSchool" optional="YES" attributeType="String"/>
+        <relationship name="alunos" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Students" inverseName="classesaluno" inverseEntity="Students"/>
         <relationship name="teacher" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Teacher" inverseName="classes" inverseEntity="Teacher"/>
     </entity>
     <entity name="Exercise" representedClassName="Exercise" syncable="YES">
@@ -13,6 +14,11 @@
         <attribute name="repetition" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="serie" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
         <relationship name="treinos" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="WorkOut" inverseName="exercicios" inverseEntity="WorkOut"/>
+    </entity>
+    <entity name="Students" representedClassName="Students" syncable="YES" codeGenerationType="class">
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="restricoes" optional="YES" attributeType="String"/>
+        <relationship name="classesaluno" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Class" inverseName="alunos" inverseEntity="Class"/>
     </entity>
     <entity name="Teacher" representedClassName="Teacher" syncable="YES" codeGenerationType="class">
         <attribute name="login" optional="YES" attributeType="String"/>
@@ -26,8 +32,9 @@
         <relationship name="exercicios" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Exercise" inverseName="treinos" inverseEntity="Exercise"/>
     </entity>
     <elements>
-        <element name="Class" positionX="-63" positionY="-9" width="128" height="104"/>
+        <element name="Class" positionX="-63" positionY="-9" width="128" height="119"/>
         <element name="Exercise" positionX="-45" positionY="45" width="128" height="104"/>
+        <element name="Students" positionX="-54" positionY="63" width="128" height="74"/>
         <element name="Teacher" positionX="-63" positionY="-18" width="128" height="89"/>
         <element name="WorkOut" positionX="-54" positionY="36" width="128" height="74"/>
     </elements>

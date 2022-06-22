@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import CoreData
 
 class ClassesInitialScreen: UIViewController {
 
@@ -17,7 +18,10 @@ class ClassesInitialScreen: UIViewController {
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
+        title = "Turmas"
+        tableView.rowHeight = 80
         fetchClass()
+        tableView.register(UINib(nibName:"ClassCell", bundle: nil),  forCellReuseIdentifier: "Classcell")
     }
 
     func fetchClass() {
@@ -36,6 +40,9 @@ class ClassesInitialScreen: UIViewController {
             addScreens.delegate = self
         }
     }
+
+//        if let classInfo = segue.destination as? ClassesInfo, let
+//    }
 }
 
 extension ClassesInitialScreen: AddScreensDelegate {
