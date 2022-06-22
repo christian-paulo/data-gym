@@ -1,11 +1,18 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="20086" systemVersion="21F79" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithCloudKit="YES" userDefinedModelVersionIdentifier="">
     <entity name="Class" representedClassName="Class" syncable="YES" codeGenerationType="class">
-        <attribute name="day_week" optional="YES" attributeType="String"/>
+        <attribute name="dayWeek" optional="YES" attributeType="String"/>
         <attribute name="hour" optional="YES" attributeType="String"/>
         <attribute name="name" optional="YES" attributeType="String"/>
-        <attribute name="semester_school" optional="YES" attributeType="String"/>
+        <attribute name="semesterSchool" optional="YES" attributeType="String"/>
         <relationship name="teacher" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Teacher" inverseName="classes" inverseEntity="Teacher"/>
+    </entity>
+    <entity name="Exercise" representedClassName="Exercise" syncable="YES">
+        <attribute name="charge" optional="YES" attributeType="String"/>
+        <attribute name="nameExercise" optional="YES" attributeType="String"/>
+        <attribute name="repetition" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="serie" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <relationship name="treinos" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="WorkOut" inverseName="exercicios" inverseEntity="WorkOut"/>
     </entity>
     <entity name="Teacher" representedClassName="Teacher" syncable="YES" codeGenerationType="class">
         <attribute name="login" optional="YES" attributeType="String"/>
@@ -13,8 +20,15 @@
         <attribute name="password" optional="YES" attributeType="String"/>
         <relationship name="classes" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Class" inverseName="teacher" inverseEntity="Class"/>
     </entity>
+    <entity name="WorkOut" representedClassName="WorkOut" syncable="YES">
+        <attribute name="exercises" optional="YES" attributeType="String"/>
+        <attribute name="nameWorkOut" optional="YES" attributeType="String"/>
+        <relationship name="exercicios" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Exercise" inverseName="treinos" inverseEntity="Exercise"/>
+    </entity>
     <elements>
         <element name="Class" positionX="-63" positionY="-9" width="128" height="104"/>
+        <element name="Exercise" positionX="-45" positionY="45" width="128" height="104"/>
         <element name="Teacher" positionX="-63" positionY="-18" width="128" height="89"/>
+        <element name="WorkOut" positionX="-54" positionY="36" width="128" height="74"/>
     </elements>
 </model>

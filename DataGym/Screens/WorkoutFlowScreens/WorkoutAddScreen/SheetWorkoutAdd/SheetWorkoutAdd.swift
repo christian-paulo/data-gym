@@ -6,12 +6,13 @@
 //
 
 import UIKit
+import CoreData
 
 class SheetWorkoutAdd: UIViewController {
-
     override func viewDidLoad() {
-        super.viewDidLoad()
-        title = "Criar Treinos"
-    }
 
+        super.viewDidLoad()
+            title = "Criar Treinos"
+        
+    }
 }

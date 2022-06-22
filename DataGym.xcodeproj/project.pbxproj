@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		452403472860A03C00582F9C /* WorkOut+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452403452860A03C00582F9C /* WorkOut+CoreDataClass.swift */; };
+		452403482860A03C00582F9C /* WorkOut+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452403462860A03C00582F9C /* WorkOut+CoreDataProperties.swift */; };
+		4524034B2860A06200582F9C /* Exercise+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452403492860A06200582F9C /* Exercise+CoreDataClass.swift */; };
+		4524034C2860A06200582F9C /* Exercise+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4524034A2860A06200582F9C /* Exercise+CoreDataProperties.swift */; };
+		4524034E286205BC00582F9C /* ClassCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4524034D286205BC00582F9C /* ClassCell.swift */; };
 		D6B6C5BD2852216F00BEB4A5 /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B6C5BC2852216F00BEB4A5 /* CustomView.swift */; };
 		D6B6C5C0285221A400BEB4A5 /* CustomView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6B6C5BF285221A400BEB4A5 /* CustomView.xib */; };
 		D6B6C5C528536ECE00BEB4A5 /* ClassesInitialScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6B6C5C428536ECE00BEB4A5 /* ClassesInitialScreen.storyboard */; };
@@ -63,6 +68,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		452403452860A03C00582F9C /* WorkOut+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "WorkOut+CoreDataClass.swift"; path = "DataGym/WorkOut+CoreDataClass.swift"; sourceTree = "<group>"; };
+		452403462860A03C00582F9C /* WorkOut+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "WorkOut+CoreDataProperties.swift"; path = "DataGym/WorkOut+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		452403492860A06200582F9C /* Exercise+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Exercise+CoreDataClass.swift"; path = "DataGym/Exercise+CoreDataClass.swift"; sourceTree = "<group>"; };
+		4524034A2860A06200582F9C /* Exercise+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Exercise+CoreDataProperties.swift"; path = "DataGym/Exercise+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		4524034D286205BC00582F9C /* ClassCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassCell.swift; sourceTree = "<group>"; };
 		D6B6C5BC2852216F00BEB4A5 /* CustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
 		D6B6C5BF285221A400BEB4A5 /* CustomView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomView.xib; sourceTree = "<group>"; };
 		D6B6C5C428536ECE00BEB4A5 /* ClassesInitialScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ClassesInitialScreen.storyboard; sourceTree = "<group>"; };
@@ -172,6 +182,7 @@
 			isa = PBXGroup;
 			children = (
 				D6B6C5C428536ECE00BEB4A5 /* ClassesInitialScreen.storyboard */,
+				4524034D286205BC00582F9C /* ClassCell.swift */,
 				D6B6C5C628536EF000BEB4A5 /* ClassesInitialScreen.swift */,
 			);
 			path = ClassesInitialScreens;
@@ -317,6 +328,10 @@
 		ED2111B628430C17001D6CAE = {
 			isa = PBXGroup;
 			children = (
+				452403492860A06200582F9C /* Exercise+CoreDataClass.swift */,
+				4524034A2860A06200582F9C /* Exercise+CoreDataProperties.swift */,
+				452403452860A03C00582F9C /* WorkOut+CoreDataClass.swift */,
+				452403462860A03C00582F9C /* WorkOut+CoreDataProperties.swift */,
 				ED2111C128430C17001D6CAE /* DataGym */,
 				ED2111DB28430C1A001D6CAE /* DataGymTests */,
 				ED2111E528430C1A001D6CAE /* DataGymUITests */,
@@ -533,19 +548,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				452403482860A03C00582F9C /* WorkOut+CoreDataProperties.swift in Sources */,
 				D6B6C5BD2852216F00BEB4A5 /* CustomView.swift in Sources */,
 				D6B6C5FF2853911000BEB4A5 /* AddStudent.swift in Sources */,
 				ED2111C728430C17001D6CAE /* ViewController.swift in Sources */,
 				D6B6C5CB285370E500BEB4A5 /* ClassesInfo.swift in Sources */,
 				ED2111C328430C17001D6CAE /* AppDelegate.swift in Sources */,
+				452403472860A03C00582F9C /* WorkOut+CoreDataClass.swift in Sources */,
 				D6B6C5DF28537AD800BEB4A5 /* ExercisesInitialScreen.swift in Sources */,
 				D6B6C5C728536EF000BEB4A5 /* ClassesInitialScreen.swift in Sources */,
 				D6B6C6032853913A00BEB4A5 /* StudentInfo.swift in Sources */,
 				D6B6C5F828538F0900BEB4A5 /* ClassesAddScreens.swift in Sources */,
+				4524034C2860A06200582F9C /* Exercise+CoreDataProperties.swift in Sources */,
 				D6B6C5D62853721100BEB4A5 /* WorkoutInitialScreen.swift in Sources */,
 				D6B6C5EA28538D9300BEB4A5 /* SheetExercInfo.swift in Sources */,
+				4524034E286205BC00582F9C /* ClassCell.swift in Sources */,
 				D6B6C5E128537AEA00BEB4A5 /* ExercisesDetailScreen.swift in Sources */,
 				ED2111C528430C17001D6CAE /* SceneDelegate.swift in Sources */,
+				4524034B2860A06200582F9C /* Exercise+CoreDataClass.swift in Sources */,
 				D6B6C5F128538E8F00BEB4A5 /* WorkoutInfo.swift in Sources */,
 				ED2111CD28430C17001D6CAE /* DataGym.xcdatamodeld in Sources */,
 				D6B6C5D4285371D500BEB4A5 /* SheetWorkoutAdd.swift in Sources */,
@@ -727,7 +747,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = JYTUW4QXB6;
+				DEVELOPMENT_TEAM = U2M84KZ35U;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = DataGym/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -755,7 +775,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = JYTUW4QXB6;
+				DEVELOPMENT_TEAM = U2M84KZ35U;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = DataGym/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

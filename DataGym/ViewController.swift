@@ -16,7 +16,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "ClassCell")
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "nomeTreinos")
         fetchClass()
     }
     func fetchClass() {
@@ -28,37 +28,28 @@ class ViewController: UIViewController {
         } catch {
         }
     }
-       @IBAction func addTapped(sender: Any) {
-        let alert = UIAlertController(title: "Add Class", message: "Whats ir their name?", preferredStyle: .alert)
-        alert.addTextField()
+    @IBAction func addTapped(sender: Any) {
+    let alert = UIAlertController(title: "Add Class", message: "Whats ir their name?", preferredStyle: .alert)
+    alert.addTextField()
 
-        let submitButton = UIAlertAction(title: "Add", style: .default) {
-            (action) in
+    let submitButton = UIAlertAction(title: "Add", style: .default) {
+        (action) in
 
-           let textfield = alert.textFields![0]
+        let textfield = alert.textFields![0]
 
             // TODO: Create a class object
 
-            let newClass = Class(context: self.context)
-            newClass.name = textfield.text
-            newClass.day_week = "Segunda-feira"
-            newClass.hour = "8 as 10"
-            newClass.semester_school = "2020.1"
-
-
-            //TODO: save to data
-
-            do {
-                try self.context.save()
-            } catch {
-
+        let newClass = Class(context: self.context)
+        newClass.name = textfield.text
+        newClass.dayWeek = "Segunda-feira"
+        newClass.hour = "8 as 10"
+        newClass.semesterSchool = "2020.1"
+        do {
+            try self.context.save()
+        } catch {
             }
-            //re-fecth the data
-            
-            self.fetchClass()
-
+        self.fetchClass()
         }
-
         let cancelButton = UIAlertAction(title: "Cancel", style: .cancel) {
             (action) in
             self.fetchClass()
@@ -74,40 +65,27 @@ class ViewController: UIViewController {
 extension ViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         let action = UIContextualAction(style: .destructive, title: "Delete") { (action,
-                                                                                 view, completionHandler) in
-            
-            //TODO: WHICH CLASS TO REMOVE
+                                                    view,completionHandler) in
             let classToRemove =  self.items![indexPath.row]
-            //TODO: REMOVE THE CLASS
             self.context.delete(classToRemove)
-            //TODO: SAVE THE DATA
             do {
                 try self.context.save()
             } catch {
-                
             }
-            
-            //TODO: RE-FETCH THE DATA
             self.fetchClass()
         }
-        
         return UISwipeActionsConfiguration(actions: [action])
     }
-    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.items?.count ?? 0
     }
-    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
         let cell = tableView.dequeueReusableCell(withIdentifier: "ClassCell", for:indexPath)
         let classe = self.items![indexPath.row]
         cell.textLabel?.text = classe.name
         return cell
     }
-    
     func tableView (_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
         let classe = self.items![indexPath.row]
         let alert = UIAlertController(title: "Edit Person", message: "Edit name: ", preferredStyle: .alert)
         alert.addTextField()
@@ -115,30 +93,21 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         let textfield = alert.textFields![0]
         textfield.text = classe.name
         let saveButton = UIAlertAction(title: "Save", style: .default) { (action) in
-            
-            //GET THE TEXTFIELD FOR THE ALERT
             let textfield = alert.textFields![0]
-            
-            //EDIT NAME PROPERTY OF CLASS OBJECT
             classe.name = textfield.text
-
-            //SAVE THE DATA
-            
             do {
                 try self.context.save()
             }
             catch {
-                
             }
             self.fetchClass()
         }
         let cancel = UIAlertAction(title: "Cancel", style: .cancel) { (action) in
-
             self.fetchClass()
         }
         alert.addAction(saveButton)
         alert.addAction(cancel)
-        
+
         self.present(alert, animated: true, completion: nil)
     }
 }
