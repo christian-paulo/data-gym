@@ -17,10 +17,12 @@ class SheetWorkoutAdd: UIViewController {
     @IBOutlet weak var nameWorkout: UITextField!
     @IBOutlet weak var exercises: UITableView!
     var selectedNote: WorkOut?
+    
     let context: NSManagedObjectContext! = {
         let appDelegate = (UIApplication.shared.delegate as? AppDelegate)
         return appDelegate?.persistentContainer.viewContext
     }()
+
     @IBAction func saveButton(_ sender: Any) {
         let newWorkout = WorkOut(context: self.context)
         newWorkout.nameWorkOut = nameWorkout.text

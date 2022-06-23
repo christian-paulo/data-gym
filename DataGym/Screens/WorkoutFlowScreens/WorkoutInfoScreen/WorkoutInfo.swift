@@ -6,15 +6,24 @@
 //
 
 import UIKit
+import CoreData
 
-class WorkoutInfo: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class WorkoutInfo: UIViewController, UITableViewDelegate, UITableViewDataSource, AddScreensDelegateExerc {
+    func createdNewExerc() {
+        fetchInfo()
+    }
+
 
     @IBOutlet weak var lblNameWorkout : UILabel!
     @IBOutlet weak var tblExercisices: UITableView!
 
-    var name: WorkOut?
-    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    let context: NSManagedObjectContext! = {
+        let appDelegate = (UIApplication.shared.delegate as? AppDelegate)
+        return appDelegate?.persistentContainer.viewContext
+    }()
+
     var exercises = [Exercise]()
+    var name: WorkOut?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,10 +33,13 @@ class WorkoutInfo: UIViewController, UITableViewDelegate, UITableViewDataSource 
 
         tblExercisices.delegate = self
         tblExercisices.dataSource = self
+
         fetchInfo()
+
         tblExercisices.rowHeight = 80
         tblExercisices.register(UINib(nibName: "ExerciseCell", bundle: nil), forCellReuseIdentifier: "ExerciseCell")
     }
+
     func fetchInfo() {
         do {
             self.exercises = try context.fetch(Exercise.fetchRequest())
@@ -39,40 +51,20 @@ class WorkoutInfo: UIViewController, UITableViewDelegate, UITableViewDataSource 
         }
     }
 
-    @IBAction func addExerc (_ sender: Any) {
-        let alert = UIAlertController(title: "Adicione um exercício", message: "Especificações do exercício", preferredStyle: .alert)
-        alert.addTextField()
-        alert.addTextField()
-        alert.addTextField()
-        alert.addTextField()
-
-        let submitButton = UIAlertAction(title: "Add", style: .default) { (action) in
-            let nameTxt = alert.textFields![0]
-            let serieTxt = alert.textFields![1]
-            let repTxt = alert.textFields![2]
-            let cargaTxt = alert.textFields![3]
-
-            let newExercise = Exercise(context: self.context)
-
-            newExercise.nameExercise = nameTxt.text
-            newExercise.serie = serieTxt.text
-            newExercise.charge = cargaTxt.text
-            newExercise.repetition = repTxt.text
-
-            try! self.context.save()
-            self.fetchInfo()
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let navi = segue.destination as? UINavigationController, let addScreens = navi.topViewController as? SheetExercInfo{
+            addScreens.delegate = self
         }
 
-
-        alert.addAction(submitButton)
-
-        self.present(alert, animated: true, completion: nil)
+        if let exercInfo = segue.destination as? SheetExercInfo, let exerc = sender as? Exercise{
+            exercInfo.selectNote = exerc
+        }
     }
+
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return  self.exercises.count
     }
-
 
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration?{
 
@@ -87,38 +79,10 @@ class WorkoutInfo: UIViewController, UITableViewDelegate, UITableViewDataSource 
         return UISwipeActionsConfiguration(actions: [action])
     }
 
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath){
-        let workout = self.exercises[indexPath.row]
-
-        let alert = UIAlertController(title: "Edit Exercise", message: "Edit exercises fiels", preferredStyle: .alert)
-        alert.addTextField()
-        alert.addTextField()
-        alert.addTextField()
-        alert.addTextField()
-
-        let nameTxt = workout.nameExercise
-        let serieTxt = workout.serie
-        let repTxt = workout.repetition
-        let cargaTxt = workout.charge
-
-        let saveButton = UIAlertAction(title: "Save", style: .default){ (action) in
-
-            let nameTxt = alert.textFields![0]
-            let serieTxt = alert.textFields![1]
-            let repTxt = alert.textFields![2]
-            let cargaTxt = alert.textFields![3]
-
-            workout.nameExercise = nameTxt.text
-            workout.charge = cargaTxt.text
-            workout.serie = serieTxt.text
-            workout.repetition = serieTxt.text
-
-            try! self.context.save()
-            self.fetchInfo()
-        }
-
-        alert.addAction(saveButton)
-        self.present(alert, animated: true, completion: nil)
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        let currentItem = self.exercises[indexPath.row]
+        performSegue(withIdentifier: "SheetExercInfo", sender: currentItem)
 
     }
 
@@ -127,7 +91,7 @@ class WorkoutInfo: UIViewController, UITableViewDelegate, UITableViewDataSource 
             return UITableViewCell()
         }
         let exercise = self.exercises[indexPath.row]
-        print(exercise)
+
         cell.nomeExercise.text = exercise.nameExercise
         cell.serie.text = exercise.serie
         cell.charge.text = exercise.charge

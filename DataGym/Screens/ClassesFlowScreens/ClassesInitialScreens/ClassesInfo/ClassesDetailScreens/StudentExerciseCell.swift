@@ -1,15 +1,18 @@
 //
-//  ClassCell.swift
+//  StudentExerciseCell.swift
 //  DataGym
 //
-//  Created by Narely Lima on 21/06/22.
+//  Created by Ieda Xavier on 23/06/22.
+//
 
 import UIKit
 
-class ClassCell: UITableViewCell {
-    @IBOutlet weak var nomeTurma: UILabel!
-    @IBOutlet weak var diaSemana: UILabel!
-    @IBOutlet weak var horario: UILabel!
+class StudentExerciseCell: UITableViewCell {
+
+    @IBOutlet weak var name: UILabel!
+    @IBOutlet weak var charge: UILabel!
+    @IBOutlet weak var serie: UILabel!
+    @IBOutlet weak var repetition: UILabel!
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -21,4 +24,5 @@ class ClassCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
+
 }

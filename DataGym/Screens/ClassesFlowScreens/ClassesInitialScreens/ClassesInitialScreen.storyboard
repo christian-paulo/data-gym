@@ -107,8 +107,8 @@
                     <tabBarItem key="tabBarItem" title="Turmas" image="person.3" catalog="system" id="nv3-Um-h4q"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="FOh-28-NSV">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="FOh-28-NSV">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -131,7 +131,7 @@
         <!--ClassesInfo-->
         <scene sceneID="NeQ-kw-BT1">
             <objects>
-                <viewControllerPlaceholder id="hoy-x0-oAu" userLabel="ClassesInfo" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="ClassesInfo" id="hoy-x0-oAu" userLabel="ClassesInfo" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="Y6N-Lh-wlT"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hAH-EW-NYQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

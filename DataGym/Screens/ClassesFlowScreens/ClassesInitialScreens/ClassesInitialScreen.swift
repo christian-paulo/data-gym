@@ -12,7 +12,7 @@ class ClassesInitialScreen: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-    var items: [Class]?
+    var items = [Class]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,10 +39,13 @@ class ClassesInitialScreen: UIViewController {
             let addScreens = navi.topViewController as? ClassesAddScreens {
             addScreens.delegate = self
         }
+
+        if let classInfo = segue.destination as? ClassesInfo, let classes = sender as? Class{
+            classInfo.name = classes
+        }
     }
 
-//        if let classInfo = segue.destination as? ClassesInfo, let
-//    }
+
 }
 
 extension ClassesInitialScreen: AddScreensDelegate {
@@ -59,7 +62,7 @@ extension ClassesInitialScreen: UITableViewDelegate, UITableViewDataSource {
         ) as? ClassCell else {
             return UITableViewCell()
         }
-        let classe = self.items![indexPath.row]
+        let classe = self.items[indexPath.row]
         print(classe)
         cell.nomeTurma.text = classe.name
         cell.horario.text = classe.hour
@@ -67,6 +70,15 @@ extension ClassesInitialScreen: UITableViewDelegate, UITableViewDataSource {
         return cell
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.items?.count ?? 0
+        return self.items.count
     }
+
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        let currentItem = self.items[indexPath.row]
+        performSegue(withIdentifier: "ClassesInfo", sender: currentItem)
+
+    }
+
+    
 }
