@@ -9,7 +9,6 @@ import UIKit
 import CoreData
 
 class ClassesInitialScreen: UIViewController {
-
     @IBOutlet weak var tableView: UITableView!
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     var items: [Class]?
@@ -40,9 +39,6 @@ class ClassesInitialScreen: UIViewController {
             addScreens.delegate = self
         }
     }
-
-//        if let classInfo = segue.destination as? ClassesInfo, let
-//    }
 }
 
 extension ClassesInitialScreen: AddScreensDelegate {

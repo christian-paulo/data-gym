@@ -14,7 +14,7 @@ class WorkoutInfo: UIViewController, UITableViewDelegate, UITableViewDataSource 
 
     var name: WorkOut?
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-    var exercises = [Exercise]()
+    var exercises: [Exercise]?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,7 +26,7 @@ class WorkoutInfo: UIViewController, UITableViewDelegate, UITableViewDataSource 
         tblExercisices.dataSource = self
         fetchInfo()
         tblExercisices.rowHeight = 80
-        tblExercisices.register(UINib(nibName: "ExerciseCell", bundle: nil), forCellReuseIdentifier: "ExerciseCell")
+        tblExercisices.register(UINib(nibName: "ExerciseCell", bundle: nil), forCellReuseIdentifier: "Exercisecell")
     }
     func fetchInfo() {
         do {
@@ -70,7 +70,7 @@ class WorkoutInfo: UIViewController, UITableViewDelegate, UITableViewDataSource 
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return  self.exercises.count
+        return  self.exercises!.count ?? 0
     }
 
 
@@ -78,7 +78,7 @@ class WorkoutInfo: UIViewController, UITableViewDelegate, UITableViewDataSource 
 
         let action = UIContextualAction(style: .destructive, title: "Delete"){ (action, view, completionHnadler) in
 
-            let exercToRemove = self.exercises[indexPath.row]
+            let exercToRemove = self.exercises![indexPath.row]
             self.context.delete(exercToRemove)
             try! self.context.save()
             self.fetchInfo()
@@ -88,7 +88,7 @@ class WorkoutInfo: UIViewController, UITableViewDelegate, UITableViewDataSource 
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath){
-        let workout = self.exercises[indexPath.row]
+        let workout = self.exercises![indexPath.row]
 
         let alert = UIAlertController(title: "Edit Exercise", message: "Edit exercises fiels", preferredStyle: .alert)
         alert.addTextField()
@@ -126,7 +126,7 @@ class WorkoutInfo: UIViewController, UITableViewDelegate, UITableViewDataSource 
         guard let cell = tblExercisices.dequeueReusableCell(withIdentifier: "ExerciseCell", for: indexPath) as? ExerciseCell else {
             return UITableViewCell()
         }
-        let exercise = self.exercises[indexPath.row]
+        let exercise = self.exercises![indexPath.row]
         print(exercise)
         cell.nomeExercise.text = exercise.nameExercise
         cell.serie.text = exercise.serie

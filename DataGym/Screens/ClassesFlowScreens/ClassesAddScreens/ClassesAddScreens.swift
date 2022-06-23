@@ -77,8 +77,8 @@ class ClassesAddScreens: UIViewController {
 
             let action = UIContextualAction(style: .destructive, title: "Delete"){ (action, view, completionHnadler) in
 
-                let exercToRemove = self.items![indexPath.row]
-                self.context.delete(exercToRemove)
+                let studentsToRemove = self.items![indexPath.row]
+                self.context.delete(studentsToRemove)
                 try! self.context.save()
                 self.fetchClass()
             }

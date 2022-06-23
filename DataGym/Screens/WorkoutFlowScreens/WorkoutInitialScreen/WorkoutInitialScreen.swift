@@ -11,12 +11,10 @@ import CoreData
 class WorkoutInitialScreen: UIViewController {
     @IBOutlet var tableView: UITableView!
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-    
-    var items = [WorkOut]()
-    
+    var items: [WorkOut]?
     override func viewDidLoad() {
-            super.viewDidLoad()
-            title = "Treinos"
+        super.viewDidLoad()
+        title = "Treinos"
         tableView.delegate = self
         tableView.dataSource = self
         fetchWorkout()
@@ -42,7 +40,7 @@ class WorkoutInitialScreen: UIViewController {
     }
 }
 
-extension WorkoutInitialScreen: AddScreensDelegateSheet {
+extension WorkoutInitialScreen: AddWorkOutDelegateSheet {
     func createdNewWorkout() {
         fetchWorkout()
     }
@@ -50,12 +48,12 @@ extension WorkoutInitialScreen: AddScreensDelegateSheet {
 
 extension WorkoutInitialScreen: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.items.count
+        return self.items?.count ?? 0
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        let currentItem = self.items[indexPath.row]
+        let currentItem = self.items![indexPath.row]
         performSegue(withIdentifier: "WorkoutInfo", sender: currentItem)
 
     }
@@ -68,7 +66,7 @@ extension WorkoutInitialScreen: UITableViewDelegate, UITableViewDataSource {
             return UITableViewCell()
         }
 
-        let workout = self.items[indexPath.row]
+        let workout = self.items![indexPath.row]
         print(workout)
         cell.nomeWorkout.text = workout.nameWorkOut
         return cell
