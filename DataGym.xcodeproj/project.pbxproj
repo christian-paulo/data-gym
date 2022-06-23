@@ -285,10 +285,7 @@
 				D665074B2864AE0A00558235 /* StudentExerciseCell.xib */,
 			);
 			name = StudentInfo;
-<<<<<<< HEAD
-=======
 			path = ClassesDetailScreens;
->>>>>>> 59fbd62a0cbaa1f80f238fe47025d087bcd80c76
 			sourceTree = "<group>";
 		};
 		D6D843BF2863A9A500773907 /* Model */ = {
