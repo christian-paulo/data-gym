@@ -138,7 +138,7 @@
         <!--ClassesInfo-->
         <scene sceneID="NeQ-kw-BT1">
             <objects>
-                <viewControllerPlaceholder id="hoy-x0-oAu" userLabel="ClassesInfo" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="ClassesInfo" id="hoy-x0-oAu" userLabel="ClassesInfo" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="Y6N-Lh-wlT"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hAH-EW-NYQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

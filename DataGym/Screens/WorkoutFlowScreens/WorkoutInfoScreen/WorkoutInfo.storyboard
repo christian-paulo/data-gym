@@ -83,6 +83,9 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="CqF-6P-TWp" kind="presentation" identifier="SheetExercInfo" trigger="accessoryAction" id="rc0-bG-Z3s"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -108,7 +111,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Add"/>
                                 <connections>
-                                    <action selector="addExerc:" destination="o1a-Wl-Nrg" eventType="touchUpInside" id="Wb9-dN-fjA"/>
+                                    <segue destination="TXk-Jc-HFa" kind="presentation" identifier="SheetExercInfo" id="D0p-ob-9Wz"/>
                                 </connections>
                             </button>
                         </barButtonItem>
@@ -121,6 +124,22 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qnc-eI-P8k" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3973.913043478261" y="802.90178571428567"/>
+        </scene>
+        <!--SheetExercInfo-->
+        <scene sceneID="QQu-FO-27k">
+            <objects>
+                <viewControllerPlaceholder storyboardName="SheetExercInfo" id="CqF-6P-TWp" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rGD-Uj-eoY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4570" y="818"/>
+        </scene>
+        <!--SheetExercInfo-->
+        <scene sceneID="vnF-Sk-6cY">
+            <objects>
+                <viewControllerPlaceholder storyboardName="SheetExercInfo" id="TXk-Jc-HFa" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Gmh-Qp-0zJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4541" y="557"/>
         </scene>
     </scenes>
     <resources>

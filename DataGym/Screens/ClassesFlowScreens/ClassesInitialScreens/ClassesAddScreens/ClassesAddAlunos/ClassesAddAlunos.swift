@@ -17,21 +17,15 @@ class ClassesAddAlunos: UIViewController {
 
     @IBOutlet weak var nomeAluno: UITextField!
     @IBOutlet weak var comorbidade: UITextField!
+
     var selectedNote: Students?
 
     let context: NSManagedObjectContext! = {
         let appDelegate = (UIApplication.shared.delegate as? AppDelegate)
         return appDelegate?.persistentContainer.viewContext
     }()
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        title = "Adicionar Alunos"
-        if (selectedNote != nil) {
-            nomeAluno.text = selectedNote?.name
-            comorbidade.text = selectedNote?.restricoes
 
-        }
-    }
+
     @IBAction func buttonSave(_ sender: Any) {
         let newAluno = Students(context: self.context)
         newAluno.name = nomeAluno.text
@@ -48,5 +42,16 @@ class ClassesAddAlunos: UIViewController {
 
     @IBAction func buttonCancel(_ sender: Any) {
         self.dismiss(animated: true)
+    }
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        title = "Adicionar Alunos"
+        if (selectedNote != nil) {
+            nomeAluno.text = selectedNote?.name
+            comorbidade.text = selectedNote?.restricoes
+
+        }
+
     }
 }

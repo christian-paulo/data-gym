@@ -13,6 +13,11 @@
 		4589179028648F7300C7096E /* SheetAddExerc.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4589178F28648F7300C7096E /* SheetAddExerc.storyboard */; };
 		4591D9BB28635EE600C86355 /* ClassesAddAlunos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4591D9BA28635EE600C86355 /* ClassesAddAlunos.swift */; };
 		4591D9C328637B4A00C86355 /* AlunosCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4591D9C228637B4A00C86355 /* AlunosCell.swift */; };
+		D66507482864A6C300558235 /* Students+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66507462864A6C300558235 /* Students+CoreDataClass.swift */; };
+		D66507492864A6C300558235 /* Students+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66507472864A6C300558235 /* Students+CoreDataProperties.swift */; };
+		D665074C2864AE0A00558235 /* StudentExerciseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D665074A2864AE0A00558235 /* StudentExerciseCell.swift */; };
+		D665074D2864AE0A00558235 /* StudentExerciseCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D665074B2864AE0A00558235 /* StudentExerciseCell.xib */; };
+		D665074E2864B64200558235 /* StudentInfo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6B6C6002853912600BEB4A5 /* StudentInfo.storyboard */; };
 		D6B6C5C528536ECE00BEB4A5 /* ClassesInitialScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6B6C5C428536ECE00BEB4A5 /* ClassesInitialScreen.storyboard */; };
 		D6B6C5C728536EF000BEB4A5 /* ClassesInitialScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B6C5C628536EF000BEB4A5 /* ClassesInitialScreen.swift */; };
 		D6B6C5CB285370E500BEB4A5 /* ClassesInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B6C5CA285370E500BEB4A5 /* ClassesInfo.swift */; };
@@ -26,9 +31,6 @@
 		D6B6C5F328538EA000BEB4A5 /* WorkoutInfo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6B6C5F228538EA000BEB4A5 /* WorkoutInfo.storyboard */; };
 		D6B6C5F628538EF700BEB4A5 /* ClassesAddScreens.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6B6C5F528538EF700BEB4A5 /* ClassesAddScreens.storyboard */; };
 		D6B6C5F828538F0900BEB4A5 /* ClassesAddScreens.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B6C5F728538F0900BEB4A5 /* ClassesAddScreens.swift */; };
-		D6B6C5FD2853910100BEB4A5 /* AddStudent.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6B6C5FC2853910100BEB4A5 /* AddStudent.storyboard */; };
-		D6B6C5FF2853911000BEB4A5 /* AddStudent.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B6C5FE2853911000BEB4A5 /* AddStudent.swift */; };
-		D6B6C6012853912600BEB4A5 /* StudentInfo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6B6C6002853912600BEB4A5 /* StudentInfo.storyboard */; };
 		D6B6C6032853913A00BEB4A5 /* StudentInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B6C6022853913A00BEB4A5 /* StudentInfo.swift */; };
 		D6B6C6052853C77100BEB4A5 /* SheetWorkoutAdd.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6B6C6042853C77100BEB4A5 /* SheetWorkoutAdd.storyboard */; };
 		D6D843CE2863A9C900773907 /* Exercise+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6D843C82863A9C900773907 /* Exercise+CoreDataClass.swift */; };
@@ -76,6 +78,10 @@
 		4589178F28648F7300C7096E /* SheetAddExerc.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SheetAddExerc.storyboard; sourceTree = "<group>"; };
 		4591D9BA28635EE600C86355 /* ClassesAddAlunos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassesAddAlunos.swift; sourceTree = "<group>"; };
 		4591D9C228637B4A00C86355 /* AlunosCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlunosCell.swift; sourceTree = "<group>"; };
+		D66507462864A6C300558235 /* Students+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Students+CoreDataClass.swift"; sourceTree = "<group>"; };
+		D66507472864A6C300558235 /* Students+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Students+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		D665074A2864AE0A00558235 /* StudentExerciseCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentExerciseCell.swift; sourceTree = "<group>"; };
+		D665074B2864AE0A00558235 /* StudentExerciseCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StudentExerciseCell.xib; sourceTree = "<group>"; };
 		D6B6C5C428536ECE00BEB4A5 /* ClassesInitialScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ClassesInitialScreen.storyboard; sourceTree = "<group>"; };
 		D6B6C5C628536EF000BEB4A5 /* ClassesInitialScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassesInitialScreen.swift; sourceTree = "<group>"; };
 		D6B6C5CA285370E500BEB4A5 /* ClassesInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassesInfo.swift; sourceTree = "<group>"; };
@@ -89,8 +95,6 @@
 		D6B6C5F228538EA000BEB4A5 /* WorkoutInfo.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WorkoutInfo.storyboard; sourceTree = "<group>"; };
 		D6B6C5F528538EF700BEB4A5 /* ClassesAddScreens.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ClassesAddScreens.storyboard; sourceTree = "<group>"; };
 		D6B6C5F728538F0900BEB4A5 /* ClassesAddScreens.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassesAddScreens.swift; sourceTree = "<group>"; };
-		D6B6C5FC2853910100BEB4A5 /* AddStudent.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddStudent.storyboard; sourceTree = "<group>"; };
-		D6B6C5FE2853911000BEB4A5 /* AddStudent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddStudent.swift; sourceTree = "<group>"; };
 		D6B6C6002853912600BEB4A5 /* StudentInfo.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = StudentInfo.storyboard; sourceTree = "<group>"; };
 		D6B6C6022853913A00BEB4A5 /* StudentInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentInfo.swift; sourceTree = "<group>"; };
 		D6B6C6042853C77100BEB4A5 /* SheetWorkoutAdd.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SheetWorkoutAdd.storyboard; sourceTree = "<group>"; };
@@ -162,32 +166,10 @@
 			path = ClassesAddAlunos;
 			sourceTree = "<group>";
 		};
-		4591D9C128637AFC00C86355 /* ClassesInitialAlunos */ = {
-			isa = PBXGroup;
-			children = (
-				4591D9C228637B4A00C86355 /* AlunosCell.swift */,
-			);
-			path = ClassesInitialAlunos;
-			sourceTree = "<group>";
-		};
-		D6B6C5C228536E2300BEB4A5 /* ClassesDetailScreens */ = {
-			isa = PBXGroup;
-			children = (
-				D6B6C5FB285390E000BEB4A5 /* StudentInfo */,
-				D6B6C5FA285390D800BEB4A5 /* AddStudent */,
-				D6B6C5F92853908800BEB4A5 /* ClassesInfo */,
-			);
-			path = ClassesDetailScreens;
-			sourceTree = "<group>";
-		};
 		D6B6C5C328536EA500BEB4A5 /* ClassesFlowScreens */ = {
 			isa = PBXGroup;
 			children = (
-				4591D9C128637AFC00C86355 /* ClassesInitialAlunos */,
-				4591D9C028637ADF00C86355 /* ClassesAddAlunos */,
-				D6B6C5F428538EDF00BEB4A5 /* ClassesAddScreens */,
 				D6B6C5C9285370BB00BEB4A5 /* ClassesInitialScreens */,
-				D6B6C5C228536E2300BEB4A5 /* ClassesDetailScreens */,
 			);
 			path = ClassesFlowScreens;
 			sourceTree = "<group>";
@@ -204,9 +186,11 @@
 		D6B6C5C9285370BB00BEB4A5 /* ClassesInitialScreens */ = {
 			isa = PBXGroup;
 			children = (
-				D6B6C5C428536ECE00BEB4A5 /* ClassesInitialScreen.storyboard */,
 				4524034D286205BC00582F9C /* ClassCell.swift */,
 				D6B6C5C628536EF000BEB4A5 /* ClassesInitialScreen.swift */,
+				D6B6C5C428536ECE00BEB4A5 /* ClassesInitialScreen.storyboard */,
+				D6B6C5F428538EDF00BEB4A5 /* ClassesAddScreens */,
+				D6B6C5F92853908800BEB4A5 /* ClassesInfo */,
 			);
 			path = ClassesInitialScreens;
 			sourceTree = "<group>";
@@ -276,6 +260,7 @@
 			children = (
 				D6B6C5F528538EF700BEB4A5 /* ClassesAddScreens.storyboard */,
 				D6B6C5F728538F0900BEB4A5 /* ClassesAddScreens.swift */,
+				4591D9C028637ADF00C86355 /* ClassesAddAlunos */,
 			);
 			path = ClassesAddScreens;
 			sourceTree = "<group>";
@@ -283,19 +268,12 @@
 		D6B6C5F92853908800BEB4A5 /* ClassesInfo */ = {
 			isa = PBXGroup;
 			children = (
+				4591D9C228637B4A00C86355 /* AlunosCell.swift */,
 				D6B6C5CA285370E500BEB4A5 /* ClassesInfo.swift */,
 				D6B6C5CC285370FB00BEB4A5 /* ClassesInfo.storyboard */,
+				D6B6C5FB285390E000BEB4A5 /* StudentInfo */,
 			);
 			path = ClassesInfo;
-			sourceTree = "<group>";
-		};
-		D6B6C5FA285390D800BEB4A5 /* AddStudent */ = {
-			isa = PBXGroup;
-			children = (
-				D6B6C5FC2853910100BEB4A5 /* AddStudent.storyboard */,
-				D6B6C5FE2853911000BEB4A5 /* AddStudent.swift */,
-			);
-			path = AddStudent;
 			sourceTree = "<group>";
 		};
 		D6B6C5FB285390E000BEB4A5 /* StudentInfo */ = {
@@ -303,13 +281,18 @@
 			children = (
 				D6B6C6002853912600BEB4A5 /* StudentInfo.storyboard */,
 				D6B6C6022853913A00BEB4A5 /* StudentInfo.swift */,
+				D665074A2864AE0A00558235 /* StudentExerciseCell.swift */,
+				D665074B2864AE0A00558235 /* StudentExerciseCell.xib */,
 			);
 			name = StudentInfo;
+			path = ClassesDetailScreens;
 			sourceTree = "<group>";
 		};
 		D6D843BF2863A9A500773907 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				D66507462864A6C300558235 /* Students+CoreDataClass.swift */,
+				D66507472864A6C300558235 /* Students+CoreDataProperties.swift */,
 				D6D843C82863A9C900773907 /* Exercise+CoreDataClass.swift */,
 				D6D843C92863A9C900773907 /* Exercise+CoreDataProperties.swift */,
 				D6D843CA2863A9C900773907 /* WorkOut+CoreDataClass.swift */,
@@ -478,19 +461,19 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D665074E2864B64200558235 /* StudentInfo.storyboard in Resources */,
 				ED2111D228430C19001D6CAE /* LaunchScreen.storyboard in Resources */,
 				4589178B286391E400C7096E /* ClassesAddAlunos.storyboard in Resources */,
 				D6E8FD3528638168003DA5EC /* ExerciseCell.xib in Resources */,
 				D6B6C5C528536ECE00BEB4A5 /* ClassesInitialScreen.storyboard in Resources */,
 				D6B6C5D2285371C400BEB4A5 /* WorkoutInitialScreen.storyboard in Resources */,
 				D6B6C5F628538EF700BEB4A5 /* ClassesAddScreens.storyboard in Resources */,
-				D6B6C6012853912600BEB4A5 /* StudentInfo.storyboard in Resources */,
 				D6B6C5E828538D7C00BEB4A5 /* SheetExercInfo.storyboard in Resources */,
 				4589179028648F7300C7096E /* SheetAddExerc.storyboard in Resources */,
 				D6B6C5CD285370FB00BEB4A5 /* ClassesInfo.storyboard in Resources */,
 				D6B6C5F328538EA000BEB4A5 /* WorkoutInfo.storyboard in Resources */,
 				ED2111CF28430C19001D6CAE /* Assets.xcassets in Resources */,
-				D6B6C5FD2853910100BEB4A5 /* AddStudent.storyboard in Resources */,
+				D665074D2864AE0A00558235 /* StudentExerciseCell.xib in Resources */,
 				D6E8FD3128635E15003DA5EC /* WorkoutCell.xib in Resources */,
 				ED2111CA28430C17001D6CAE /* Main.storyboard in Resources */,
 				D6B6C6052853C77100BEB4A5 /* SheetWorkoutAdd.storyboard in Resources */,
@@ -538,7 +521,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D6B6C5FF2853911000BEB4A5 /* AddStudent.swift in Sources */,
 				D6B6C5CB285370E500BEB4A5 /* ClassesInfo.swift in Sources */,
 				ED2111C328430C17001D6CAE /* AppDelegate.swift in Sources */,
 				D6B6C5FF2853911000BEB4A5 /* AddStudent.swift in Sources */,
@@ -548,8 +530,11 @@
 				4589178E28648F6100C7096E /* SheetAddExerc.swift in Sources */,
 				D6D843D22863A9C900773907 /* Class+CoreDataClass.swift in Sources */,
 				D6B6C5CB285370E500BEB4A5 /* ClassesInfo.swift in Sources */,
+				D66507482864A6C300558235 /* Students+CoreDataClass.swift in Sources */,
 				ED2111C328430C17001D6CAE /* AppDelegate.swift in Sources */,
+				D66507492864A6C300558235 /* Students+CoreDataProperties.swift in Sources */,
 				D6B6C5C728536EF000BEB4A5 /* ClassesInitialScreen.swift in Sources */,
+				D665074C2864AE0A00558235 /* StudentExerciseCell.swift in Sources */,
 				D6D843D02863A9C900773907 /* WorkOut+CoreDataClass.swift in Sources */,
 				D6D843D32863A9C900773907 /* Class+CoreDataProperties.swift in Sources */,
 				D6B6C6032853913A00BEB4A5 /* StudentInfo.swift in Sources */,

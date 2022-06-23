@@ -47,13 +47,13 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="LKl-rY-eyX">
-                        <barButtonItem key="leftBarButtonItem" style="plain" systemItem="cancel" id="e9B-gG-DPm">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="e9B-gG-DPm">
                             <color key="tintColor" systemColor="systemMintColor"/>
                             <connections>
                                 <action selector="buttonCancel:" destination="Y6W-OH-hqX" id="jAr-2V-dBn"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="save" id="vCa-Ua-it6">
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="vCa-Ua-it6">
                             <color key="tintColor" systemColor="systemMintColor"/>
                             <connections>
                                 <action selector="buttonSave:" destination="Y6W-OH-hqX" id="CME-ib-BeE"/>
@@ -67,7 +67,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1162" y="-288"/>
+            <point key="canvasLocation" x="1074" y="-269"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Njv-o7-afW">

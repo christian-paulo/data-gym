@@ -20,10 +20,12 @@ class SheetWorkoutAdd: UIViewController {
     var selectedNote: WorkOut?
 
     var items: [Exercise]?
+
     let context: NSManagedObjectContext! = {
         let appDelegate = (UIApplication.shared.delegate as? AppDelegate)
         return appDelegate?.persistentContainer.viewContext
     }()
+
     @IBAction func saveButton(_ sender: Any) {
         let newWorkout = WorkOut(context: self.context)
         newWorkout.nameWorkOut = nameWorkout.text
@@ -44,7 +46,7 @@ class SheetWorkoutAdd: UIViewController {
     override func viewDidLoad() {
 
         super.viewDidLoad()
-            title = "Criar Treinos"
+        title = "Criar Treinos"
         if (selectedNote != nil) {
             nameWorkout.text = selectedNote?.nameWorkOut
         }
@@ -53,7 +55,10 @@ class SheetWorkoutAdd: UIViewController {
         title = "Adicionar Exercício"
         exercises.rowHeight = 80
         fetchExercise()
-        exercises.register(UINib(nibName: "ExerciseCell", bundle: nil), forCellReuseIdentifier: "ExerciseCell")
+        exercises.register(
+            UINib(nibName: "ExerciseCell", bundle: nil),
+            forCellReuseIdentifier: "ExerciseCell"
+        )
     }
     func fetchExercise() {
         do {
@@ -64,19 +69,22 @@ class SheetWorkoutAdd: UIViewController {
         } catch {
         }
     }
-    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
-            let action = UIContextualAction(style: .destructive, title: "Delete") { (action, view, completionHnadler) in
-                let exercToRemove = self.items![indexPath.row]
-                self.context.delete(exercToRemove)
-                try! self.context.save()
-                self.fetchExercise()
-            }
-
-            return UISwipeActionsConfiguration(actions: [action])
+    func tableView(
+        _ tableView: UITableView,
+        trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath
+    ) -> UISwipeActionsConfiguration? {
+        let action = UIContextualAction(style: .destructive, title: "Delete") { (_, _, _) in
+            let exercToRemove = self.items![indexPath.row]
+            self.context.delete(exercToRemove)
+            try? self.context.save()
+            self.fetchExercise()
         }
+
+        return UISwipeActionsConfiguration(actions: [action])
+    }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let navi = segue.destination as? UINavigationController,
-            let addExerc = navi.topViewController as? SheetAddExerc {
+           let addExerc = navi.topViewController as? SheetAddExerc {
             addExerc.delegate = self
         }
     }
@@ -96,13 +104,13 @@ extension SheetWorkoutAdd: UITableViewDelegate, UITableViewDataSource {
         ) as? ExerciseCell else {
             return UITableViewCell()
         }
-    let exercise = self.items![indexPath.row]
-    print(exercise)
+        let exercise = self.items![indexPath.row]
+        print(exercise)
         cell.nomeExercise.text = exercise.nameExercise
         cell.charge.text = exercise.charge
         cell.serie.text = exercise.serie
         cell.repetition.text = exercise.repetition
-    return cell
+        return cell
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.items?.count ?? 0

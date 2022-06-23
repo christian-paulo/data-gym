@@ -11,15 +11,18 @@ import CoreData
 class WorkoutInitialScreen: UIViewController {
     @IBOutlet var tableView: UITableView!
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-    var items: [WorkOut]?
+    var items = [WorkOut]()
+
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Treinos"
         tableView.delegate = self
         tableView.dataSource = self
         fetchWorkout()
+        tableView.rowHeight = 80
         tableView.register(UINib(nibName: "WorkoutCell", bundle: nil), forCellReuseIdentifier: "WorkoutCell")
     }
+
     func fetchWorkout() {
         do {
             self.items = try context.fetch(WorkOut.fetchRequest())
@@ -29,6 +32,7 @@ class WorkoutInitialScreen: UIViewController {
         } catch {
         }
     }
+
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let navi = segue.destination as? UINavigationController,
            let addScreens = navi.topViewController as? SheetWorkoutAdd {
@@ -48,12 +52,12 @@ extension WorkoutInitialScreen: AddWorkOutDelegateSheet {
 
 extension WorkoutInitialScreen: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.items?.count ?? 0
+        return self.items.count
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        let currentItem = self.items![indexPath.row]
+        let currentItem = self.items[indexPath.row]
         performSegue(withIdentifier: "WorkoutInfo", sender: currentItem)
 
     }
@@ -66,8 +70,7 @@ extension WorkoutInitialScreen: UITableViewDelegate, UITableViewDataSource {
             return UITableViewCell()
         }
 
-        let workout = self.items![indexPath.row]
-        print(workout)
+        let workout = self.items[indexPath.row]
         cell.nomeWorkout.text = workout.nameWorkOut
         return cell
     }

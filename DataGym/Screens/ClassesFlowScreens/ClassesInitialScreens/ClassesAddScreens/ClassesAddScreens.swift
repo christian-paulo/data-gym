@@ -12,7 +12,11 @@ protocol AddScreensDelegate: AnyObject {
     func createdNewClass()
 }
 
-class ClassesAddScreens: UIViewController {
+class ClassesAddScreens: UIViewController, AddAlunosDelegate {
+    func createdNewAlunos() {
+        fetchClass()
+    }
+
 
     weak var delegate: AddScreensDelegate? // Estudar ARC
 
@@ -21,9 +25,11 @@ class ClassesAddScreens: UIViewController {
     @IBOutlet weak var schedule: UITextField!
     @IBOutlet weak var diaSemana: UITextField!
     @IBOutlet weak var tableView: UITableView!
+
     var selectedNote: Class?
 
     var items: [Students]?
+
     let context: NSManagedObjectContext! = {
         let appDelegate = (UIApplication.shared.delegate as? AppDelegate)
         return appDelegate?.persistentContainer.viewContext
@@ -92,8 +98,8 @@ class ClassesAddScreens: UIViewController {
         }
     }
 }
-extension ClassesAddScreens: AddAlunosDelegate {
-    func createdNewAlunos() {
+extension ClassesAddScreens: AddScreensDelegate {
+    func createdNewClass() {
         fetchClass()
     }
 }
