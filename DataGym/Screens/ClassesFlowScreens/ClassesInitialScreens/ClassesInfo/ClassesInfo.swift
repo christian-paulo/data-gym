@@ -65,7 +65,9 @@ class ClassesInfo: UIViewController, UITableViewDelegate, UITableViewDataSource,
         if let alunoInfo = segue.destination as? StudentInfo, let alunos = sender as? Students{
             alunoInfo.aluno = alunos
         }
-
+        if let navi = segue.destination as? UINavigationController, let addAlunos = navi.topViewController as? ClassesAddAlunos {
+            addAlunos.delegate = self
+        }
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

@@ -25,10 +25,10 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="AlunosCell" rowHeight="65" id="DxA-Ff-fBz">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="AlunosCell" rowHeight="65" id="DxA-Ff-fBz" customClass="AlunosCell" customModule="DataGym" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="44.5" width="414" height="65"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="DxA-Ff-fBz" id="OnD-6f-wmB" customClass="AlunosCell" customModule="DataGym" customModuleProvider="target">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="DxA-Ff-fBz" id="OnD-6f-wmB">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="65"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
@@ -54,6 +54,8 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="nomeCompleto" destination="S2h-yF-dwO" id="wGz-c5-zGP"/>
+                                            <outlet property="restricao" destination="Oo5-9e-bWo" id="9CR-8W-jKD"/>
                                             <segue destination="gMc-jl-uf7" kind="presentation" identifier="StudentInfo" id="aWg-He-zIh"/>
                                         </connections>
                                     </tableViewCell>

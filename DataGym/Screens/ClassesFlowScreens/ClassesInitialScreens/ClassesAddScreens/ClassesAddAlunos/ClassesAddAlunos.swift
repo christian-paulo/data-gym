@@ -25,7 +25,6 @@ class ClassesAddAlunos: UIViewController {
         return appDelegate?.persistentContainer.viewContext
     }()
 
-
     @IBAction func buttonSave(_ sender: Any) {
         let newAluno = Students(context: self.context)
         newAluno.name = nomeAluno.text

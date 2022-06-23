@@ -13,7 +13,6 @@ class WorkoutInfo: UIViewController, UITableViewDelegate, UITableViewDataSource,
         fetchInfo()
     }
 
-
     @IBOutlet weak var lblNameWorkout : UILabel!
     @IBOutlet weak var tblExercisices: UITableView!
 
@@ -56,8 +55,8 @@ class WorkoutInfo: UIViewController, UITableViewDelegate, UITableViewDataSource,
             addScreens.delegate = self
         }
 
-        if let exercInfo = segue.destination as? SheetExercInfo, let exerc = sender as? Exercise{
-            exercInfo.selectNote = exerc
+        if let exercInfo = segue.destination as? SheetExercInfo {
+            exercInfo.delegate = self
         }
     }
 

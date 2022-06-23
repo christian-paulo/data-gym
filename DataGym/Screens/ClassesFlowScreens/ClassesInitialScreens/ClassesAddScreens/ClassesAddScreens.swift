@@ -107,7 +107,7 @@ extension ClassesAddScreens: AddScreensDelegate {
 extension ClassesAddScreens: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(
-            withIdentifier: "nomeAlunos",
+            withIdentifier: "AlunosCell",
             for: indexPath
         ) as? AlunosCell else {
             return UITableViewCell()

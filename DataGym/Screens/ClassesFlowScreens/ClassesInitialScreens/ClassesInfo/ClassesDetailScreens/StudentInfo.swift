@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import CoreData
 
 class StudentInfo: UIViewController, UITableViewDelegate, UITableViewDataSource, AddAlunosDelegate {
 
@@ -18,7 +19,11 @@ class StudentInfo: UIViewController, UITableViewDelegate, UITableViewDataSource,
     @IBOutlet weak var lblRestricoes: UITextField!
     @IBOutlet weak var tblStudentExercises: UITableView!
 
-    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    let context: NSManagedObjectContext! = {
+        let appDelegate = (UIApplication.shared.delegate as? AppDelegate)
+        return appDelegate?.persistentContainer.viewContext
+    }()
+
     var lista : [Exercise]!
     var aluno: Students?
 
@@ -42,7 +47,7 @@ class StudentInfo: UIViewController, UITableViewDelegate, UITableViewDataSource,
     func fetchLista() {
         do {
             self.lista = try context.fetch(Exercise.fetchRequest())
-            DispatchQueue.main.async{
+            DispatchQueue.main.async {
                 self.tblStudentExercises.reloadData()
             }
         } catch {
