@@ -12,7 +12,11 @@ protocol AddScreensDelegate: AnyObject {
     func createdNewClass()
 }
 
-class ClassesAddScreens: UIViewController {
+class ClassesAddScreens: UIViewController, AddAlunosDelegate {
+    func createdNewAlunos() {
+        fetchClass()
+    }
+
 
     weak var delegate: AddScreensDelegate? // Estudar ARC
 
@@ -21,9 +25,11 @@ class ClassesAddScreens: UIViewController {
     @IBOutlet weak var schedule: UITextField!
     @IBOutlet weak var diaSemana: UITextField!
     @IBOutlet weak var tableView: UITableView!
+
     var selectedNote: Class?
 
     var items: [Students]?
+
     let context: NSManagedObjectContext! = {
         let appDelegate = (UIApplication.shared.delegate as? AppDelegate)
         return appDelegate?.persistentContainer.viewContext
@@ -77,8 +83,8 @@ class ClassesAddScreens: UIViewController {
 
             let action = UIContextualAction(style: .destructive, title: "Delete"){ (action, view, completionHnadler) in
 
-                let exercToRemove = self.items![indexPath.row]
-                self.context.delete(exercToRemove)
+                let studentsToRemove = self.items![indexPath.row]
+                self.context.delete(studentsToRemove)
                 try! self.context.save()
                 self.fetchClass()
             }
@@ -92,8 +98,8 @@ class ClassesAddScreens: UIViewController {
         }
     }
 }
-extension ClassesAddScreens: AddAlunosDelegate {
-    func createdNewAlunos() {
+extension ClassesAddScreens: AddScreensDelegate {
+    func createdNewClass() {
         fetchClass()
     }
 }
@@ -101,7 +107,7 @@ extension ClassesAddScreens: AddAlunosDelegate {
 extension ClassesAddScreens: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(
-            withIdentifier: "nomeAlunos",
+            withIdentifier: "AlunosCell",
             for: indexPath
         ) as? AlunosCell else {
             return UITableViewCell()

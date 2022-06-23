@@ -9,10 +9,12 @@ import UIKit
 import CoreData
 
 class ClassesInitialScreen: UIViewController {
-
     @IBOutlet weak var tableView: UITableView!
-    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-    var items: [Class]?
+    let context: NSManagedObjectContext? = {
+        let appDelegate = (UIApplication.shared.delegate as? AppDelegate)
+        return appDelegate?.persistentContainer.viewContext
+    }()
+    var items = [Class]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,7 +26,7 @@ class ClassesInitialScreen: UIViewController {
 
     func fetchClass() {
         do {
-            self.items = try context.fetch(Class.fetchRequest())
+            self.items = try context?.fetch(Class.fetchRequest()) ?? []
             DispatchQueue.main.async {
                 self.tableView.reloadData()
             }
@@ -37,10 +39,11 @@ class ClassesInitialScreen: UIViewController {
             let addScreens = navi.topViewController as? ClassesAddScreens {
             addScreens.delegate = self
         }
-    }
 
-//        if let classInfo = segue.destination as? ClassesInfo, let
-//    }
+        if let classInfo = segue.destination as? ClassesInfo, let classes = sender as? Class{
+            classInfo.name = classes
+        }
+    }
 }
 
 extension ClassesInitialScreen: AddScreensDelegate {
@@ -57,7 +60,7 @@ extension ClassesInitialScreen: UITableViewDelegate, UITableViewDataSource {
         ) as? ClassCell else {
             return UITableViewCell()
         }
-        let classe = self.items![indexPath.row]
+        let classe = self.items[indexPath.row]
         print(classe)
         cell.nomeTurma.text = classe.name
         cell.horario.text = classe.hour
@@ -65,6 +68,14 @@ extension ClassesInitialScreen: UITableViewDelegate, UITableViewDataSource {
         return cell
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.items?.count ?? 0
+        return self.items.count
     }
+
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        let currentItem = self.items[indexPath.row]
+        performSegue(withIdentifier: "ClassesInfo", sender: currentItem)
+
+    }
+
 }

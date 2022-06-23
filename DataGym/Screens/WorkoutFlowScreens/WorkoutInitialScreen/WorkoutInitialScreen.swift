@@ -11,17 +11,18 @@ import CoreData
 class WorkoutInitialScreen: UIViewController {
     @IBOutlet var tableView: UITableView!
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-    
     var items = [WorkOut]()
-    
+
     override func viewDidLoad() {
-            super.viewDidLoad()
-            title = "Treinos"
+        super.viewDidLoad()
+        title = "Treinos"
         tableView.delegate = self
         tableView.dataSource = self
         fetchWorkout()
+        tableView.rowHeight = 80
         tableView.register(UINib(nibName: "WorkoutCell", bundle: nil), forCellReuseIdentifier: "WorkoutCell")
     }
+
     func fetchWorkout() {
         do {
             self.items = try context.fetch(WorkOut.fetchRequest())
@@ -31,6 +32,7 @@ class WorkoutInitialScreen: UIViewController {
         } catch {
         }
     }
+
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let navi = segue.destination as? UINavigationController,
            let addScreens = navi.topViewController as? SheetWorkoutAdd {
@@ -42,7 +44,7 @@ class WorkoutInitialScreen: UIViewController {
     }
 }
 
-extension WorkoutInitialScreen: AddScreensDelegateSheet {
+extension WorkoutInitialScreen: AddWorkOutDelegateSheet {
     func createdNewWorkout() {
         fetchWorkout()
     }
@@ -69,7 +71,6 @@ extension WorkoutInitialScreen: UITableViewDelegate, UITableViewDataSource {
         }
 
         let workout = self.items[indexPath.row]
-        print(workout)
         cell.nomeWorkout.text = workout.nameWorkOut
         return cell
     }
