@@ -10,4 +10,9 @@ class ClassCell: UITableViewCell {
     @IBOutlet weak var nomeTurma: UILabel!
     @IBOutlet weak var diaSemana: UILabel!
     @IBOutlet weak var horario: UILabel!
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        
+    }
 }

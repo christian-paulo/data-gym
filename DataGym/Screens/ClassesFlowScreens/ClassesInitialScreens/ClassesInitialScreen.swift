@@ -19,9 +19,7 @@ class ClassesInitialScreen: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         title = "Turmas"
-        tableView.rowHeight = 80
         fetchClass()
-        tableView.register(UINib(nibName:"ClassCell", bundle: nil),  forCellReuseIdentifier: "Classcell")
     }
 
     func fetchClass() {

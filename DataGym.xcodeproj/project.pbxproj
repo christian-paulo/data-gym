@@ -293,15 +293,6 @@
 			name = StudentInfo;
 			sourceTree = "<group>";
 		};
-		D6B8B1EB2858D89800CE73D7 /* TableTurmas */ = {
-			isa = PBXGroup;
-			children = (
-				D6B6C5BC2852216F00BEB4A5 /* CustomView.swift */,
-				D6B6C5BF285221A400BEB4A5 /* CustomView.xib */,
-			);
-			path = TableTurmas;
-			sourceTree = "<group>";
-		};
 		D6D843BF2863A9A500773907 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -339,7 +330,6 @@
 			isa = PBXGroup;
 			children = (
 				D6D843BF2863A9A500773907 /* Model */,
-				D6B6C5BB2852213E00BEB4A5 /* CustomComponent */,
 				D6B6C5C82853701F00BEB4A5 /* Screens */,
 				ED2111C228430C17001D6CAE /* AppDelegate.swift */,
 				ED2111C428430C17001D6CAE /* SceneDelegate.swift */,
@@ -536,9 +526,7 @@
 				D6B6C5FF2853911000BEB4A5 /* AddStudent.swift in Sources */,
 				D6B6C5CB285370E500BEB4A5 /* ClassesInfo.swift in Sources */,
 				ED2111C328430C17001D6CAE /* AppDelegate.swift in Sources */,
-				D6B6C5BD2852216F00BEB4A5 /* CustomView.swift in Sources */,
 				D6B6C5FF2853911000BEB4A5 /* AddStudent.swift in Sources */,
-				ED2111C728430C17001D6CAE /* ViewController.swift in Sources */,
 				D6E8FD3028635E15003DA5EC /* WorkoutCell.swift in Sources */,
 				D6E8FD3428638168003DA5EC /* ExerciseCell.swift in Sources */,
 				D6D843CE2863A9C900773907 /* Exercise+CoreDataClass.swift in Sources */,
@@ -551,7 +539,6 @@
 				D6B6C6032853913A00BEB4A5 /* StudentInfo.swift in Sources */,
 				D6B6C5F828538F0900BEB4A5 /* ClassesAddScreens.swift in Sources */,
 				4591D9C328637B4A00C86355 /* AlunosCell.swift in Sources */,
-				4524034C2860A06200582F9C /* Exercise+CoreDataProperties.swift in Sources */,
 				D6B6C5D62853721100BEB4A5 /* WorkoutInitialScreen.swift in Sources */,
 				4591D9BB28635EE600C86355 /* ClassesAddAlunos.swift in Sources */,
 				D6B6C5EA28538D9300BEB4A5 /* SheetExercInfo.swift in Sources */,
@@ -739,7 +726,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = U2M84KZ35U;
+				DEVELOPMENT_TEAM = G86S93KJZK;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = DataGym/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -767,7 +754,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = U2M84KZ35U;
+				DEVELOPMENT_TEAM = G86S93KJZK;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = DataGym/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
