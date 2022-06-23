@@ -13,7 +13,7 @@ class WorkoutInfo: UIViewController, UITableViewDelegate, UITableViewDataSource,
         fetchInfo()
     }
 
-    @IBOutlet weak var lblNameWorkout : UILabel!
+    @IBOutlet weak var lblNameWorkout: UILabel!
     @IBOutlet weak var tblExercisices: UITableView!
 
     let context: NSManagedObjectContext! = {
@@ -51,7 +51,8 @@ class WorkoutInfo: UIViewController, UITableViewDelegate, UITableViewDataSource,
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let navi = segue.destination as? UINavigationController, let addScreens = navi.topViewController as? SheetExercInfo{
+        if let navi = segue.destination as? UINavigationController,
+            let addScreens = navi.topViewController as? SheetExercInfo {
             addScreens.delegate = self
         }
 
@@ -60,18 +61,23 @@ class WorkoutInfo: UIViewController, UITableViewDelegate, UITableViewDataSource,
         }
     }
 
-
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return  self.exercises.count
     }
 
-    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration?{
+    func tableView(
+        _ tableView: UITableView,
+        trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath
+    ) -> UISwipeActionsConfiguration? {
 
-        let action = UIContextualAction(style: .destructive, title: "Delete"){ (action, view, completionHnadler) in
+        let action = UIContextualAction(
+            style: .destructive,
+            title: "Delete"
+        ) { (_, _, _) in
 
             let exercToRemove = self.exercises[indexPath.row]
             self.context.delete(exercToRemove)
-            try! self.context.save()
+            try? self.context.save()
             self.fetchInfo()
         }
 
@@ -82,15 +88,16 @@ class WorkoutInfo: UIViewController, UITableViewDelegate, UITableViewDataSource,
         tableView.deselectRow(at: indexPath, animated: true)
         let currentItem = self.exercises[indexPath.row]
         performSegue(withIdentifier: "SheetExercInfo", sender: currentItem)
-
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tblExercisices.dequeueReusableCell(withIdentifier: "ExerciseCell", for: indexPath) as? ExerciseCell else {
+        guard let cell = tblExercisices.dequeueReusableCell(
+            withIdentifier: "ExerciseCell",
+            for: indexPath
+        ) as? ExerciseCell else {
             return UITableViewCell()
         }
         let exercise = self.exercises[indexPath.row]
-
         cell.nomeExercise.text = exercise.nameExercise
         cell.serie.text = exercise.serie
         cell.charge.text = exercise.charge

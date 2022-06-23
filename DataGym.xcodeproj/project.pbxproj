@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		4524034E286205BC00582F9C /* ClassCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4524034D286205BC00582F9C /* ClassCell.swift */; };
 		4589178B286391E400C7096E /* ClassesAddAlunos.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4589178A286391E400C7096E /* ClassesAddAlunos.storyboard */; };
+		4589178E28648F6100C7096E /* SheetAddExerc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4589178D28648F6100C7096E /* SheetAddExerc.swift */; };
+		4589179028648F7300C7096E /* SheetAddExerc.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4589178F28648F7300C7096E /* SheetAddExerc.storyboard */; };
 		4591D9BB28635EE600C86355 /* ClassesAddAlunos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4591D9BA28635EE600C86355 /* ClassesAddAlunos.swift */; };
 		4591D9C328637B4A00C86355 /* AlunosCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4591D9C228637B4A00C86355 /* AlunosCell.swift */; };
 		D66507482864A6C300558235 /* Students+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66507462864A6C300558235 /* Students+CoreDataClass.swift */; };
@@ -72,6 +74,8 @@
 /* Begin PBXFileReference section */
 		4524034D286205BC00582F9C /* ClassCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassCell.swift; sourceTree = "<group>"; };
 		4589178A286391E400C7096E /* ClassesAddAlunos.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ClassesAddAlunos.storyboard; sourceTree = "<group>"; };
+		4589178D28648F6100C7096E /* SheetAddExerc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetAddExerc.swift; sourceTree = "<group>"; };
+		4589178F28648F7300C7096E /* SheetAddExerc.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SheetAddExerc.storyboard; sourceTree = "<group>"; };
 		4591D9BA28635EE600C86355 /* ClassesAddAlunos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassesAddAlunos.swift; sourceTree = "<group>"; };
 		4591D9C228637B4A00C86355 /* AlunosCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlunosCell.swift; sourceTree = "<group>"; };
 		D66507462864A6C300558235 /* Students+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Students+CoreDataClass.swift"; sourceTree = "<group>"; };
@@ -144,6 +148,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4589178C28648F2C00C7096E /* SheetAddExerc */ = {
+			isa = PBXGroup;
+			children = (
+				4589178D28648F6100C7096E /* SheetAddExerc.swift */,
+				4589178F28648F7300C7096E /* SheetAddExerc.storyboard */,
+			);
+			path = SheetAddExerc;
+			sourceTree = "<group>";
+		};
 		4591D9C028637ADF00C86355 /* ClassesAddAlunos */ = {
 			isa = PBXGroup;
 			children = (
@@ -206,6 +219,7 @@
 		D6B6C5D02853719D00BEB4A5 /* WorkoutAddScreen */ = {
 			isa = PBXGroup;
 			children = (
+				4589178C28648F2C00C7096E /* SheetAddExerc */,
 				D6B6C5E628538CC400BEB4A5 /* SheetExercInfo */,
 				D6B6C5E428538C1F00BEB4A5 /* SheetWorkoutAdd */,
 			);
@@ -455,6 +469,7 @@
 				D6B6C5D2285371C400BEB4A5 /* WorkoutInitialScreen.storyboard in Resources */,
 				D6B6C5F628538EF700BEB4A5 /* ClassesAddScreens.storyboard in Resources */,
 				D6B6C5E828538D7C00BEB4A5 /* SheetExercInfo.storyboard in Resources */,
+				4589179028648F7300C7096E /* SheetAddExerc.storyboard in Resources */,
 				D6B6C5CD285370FB00BEB4A5 /* ClassesInfo.storyboard in Resources */,
 				D6B6C5F328538EA000BEB4A5 /* WorkoutInfo.storyboard in Resources */,
 				ED2111CF28430C19001D6CAE /* Assets.xcassets in Resources */,
@@ -508,9 +523,11 @@
 			files = (
 				D6B6C5CB285370E500BEB4A5 /* ClassesInfo.swift in Sources */,
 				ED2111C328430C17001D6CAE /* AppDelegate.swift in Sources */,
+				D6B6C5FF2853911000BEB4A5 /* AddStudent.swift in Sources */,
 				D6E8FD3028635E15003DA5EC /* WorkoutCell.swift in Sources */,
 				D6E8FD3428638168003DA5EC /* ExerciseCell.swift in Sources */,
 				D6D843CE2863A9C900773907 /* Exercise+CoreDataClass.swift in Sources */,
+				4589178E28648F6100C7096E /* SheetAddExerc.swift in Sources */,
 				D6D843D22863A9C900773907 /* Class+CoreDataClass.swift in Sources */,
 				D6B6C5CB285370E500BEB4A5 /* ClassesInfo.swift in Sources */,
 				D66507482864A6C300558235 /* Students+CoreDataClass.swift in Sources */,

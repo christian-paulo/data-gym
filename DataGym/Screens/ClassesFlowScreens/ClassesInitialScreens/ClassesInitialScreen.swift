@@ -9,9 +9,11 @@ import UIKit
 import CoreData
 
 class ClassesInitialScreen: UIViewController {
-
     @IBOutlet weak var tableView: UITableView!
-    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    let context: NSManagedObjectContext? = {
+        let appDelegate = (UIApplication.shared.delegate as? AppDelegate)
+        return appDelegate?.persistentContainer.viewContext
+    }()
     var items = [Class]()
 
     override func viewDidLoad() {
@@ -26,7 +28,7 @@ class ClassesInitialScreen: UIViewController {
 
     func fetchClass() {
         do {
-            self.items = try context.fetch(Class.fetchRequest())
+            self.items = try context?.fetch(Class.fetchRequest()) ?? []
             DispatchQueue.main.async {
                 self.tableView.reloadData()
             }
@@ -44,8 +46,6 @@ class ClassesInitialScreen: UIViewController {
             classInfo.name = classes
         }
     }
-
-
 }
 
 extension ClassesInitialScreen: AddScreensDelegate {
@@ -80,5 +80,4 @@ extension ClassesInitialScreen: UITableViewDelegate, UITableViewDataSource {
 
     }
 
-    
 }

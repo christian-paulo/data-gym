@@ -44,7 +44,7 @@ class WorkoutInitialScreen: UIViewController {
     }
 }
 
-extension WorkoutInitialScreen: AddScreensDelegateSheet {
+extension WorkoutInitialScreen: AddWorkOutDelegateSheet {
     func createdNewWorkout() {
         fetchWorkout()
     }
