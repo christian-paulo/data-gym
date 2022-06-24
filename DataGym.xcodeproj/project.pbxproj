@@ -523,7 +523,6 @@
 			files = (
 				D6B6C5CB285370E500BEB4A5 /* ClassesInfo.swift in Sources */,
 				ED2111C328430C17001D6CAE /* AppDelegate.swift in Sources */,
-				D6B6C5FF2853911000BEB4A5 /* AddStudent.swift in Sources */,
 				D6E8FD3028635E15003DA5EC /* WorkoutCell.swift in Sources */,
 				D6E8FD3428638168003DA5EC /* ExerciseCell.swift in Sources */,
 				D6D843CE2863A9C900773907 /* Exercise+CoreDataClass.swift in Sources */,
