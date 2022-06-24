@@ -16,35 +16,45 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bSg-9b-QfG">
-                                <rect key="frame" x="20" y="147" width="374" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bSg-9b-QfG">
+                                <rect key="frame" x="16" y="153" width="382" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Comorbidade" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="COb-Aj-kyG">
-                                <rect key="frame" x="20" y="189" width="104" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Comorbidade" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="COb-Aj-kyG">
+                                <rect key="frame" x="16" y="203" width="104" height="33"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DGq-LH-eOj">
-                                <rect key="frame" x="20" y="218" width="374" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Nome do Aluno" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ujZ-II-ZIo">
-                                <rect key="frame" x="13" y="118" width="141" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nome do Aluno" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ujZ-II-ZIo">
+                                <rect key="frame" x="16" y="120" width="117.5" height="33"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DGq-LH-eOj">
+                                <rect key="frame" x="16" y="236" width="382" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="DGq-LH-eOj" firstAttribute="leading" secondItem="COb-Aj-kyG" secondAttribute="leading" id="0Pu-rc-whe"/>
+                            <constraint firstItem="DGq-LH-eOj" firstAttribute="top" secondItem="COb-Aj-kyG" secondAttribute="bottom" id="58J-PQ-SDu"/>
+                            <constraint firstItem="bSg-9b-QfG" firstAttribute="top" secondItem="ujZ-II-ZIo" secondAttribute="bottom" id="7pc-Lt-uYx"/>
+                            <constraint firstItem="ujZ-II-ZIo" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="32" id="KIV-8c-Vty"/>
+                            <constraint firstItem="COb-Aj-kyG" firstAttribute="leading" secondItem="bSg-9b-QfG" secondAttribute="leading" id="UGc-p5-8G1"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="bSg-9b-QfG" secondAttribute="trailing" constant="16" id="ayy-6i-uRa"/>
+                            <constraint firstItem="DGq-LH-eOj" firstAttribute="trailing" secondItem="bSg-9b-QfG" secondAttribute="trailing" id="cLK-cT-Vec"/>
+                            <constraint firstItem="DGq-LH-eOj" firstAttribute="height" secondItem="COb-Aj-kyG" secondAttribute="height" constant="1" id="dX0-gB-M4S"/>
+                            <constraint firstItem="bSg-9b-QfG" firstAttribute="height" secondItem="ujZ-II-ZIo" secondAttribute="height" constant="1" id="hcD-ZB-euw"/>
+                            <constraint firstItem="COb-Aj-kyG" firstAttribute="top" secondItem="bSg-9b-QfG" secondAttribute="bottom" constant="16" id="m29-Zx-wll"/>
+                            <constraint firstItem="ujZ-II-ZIo" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="paz-eV-ohi"/>
+                            <constraint firstItem="bSg-9b-QfG" firstAttribute="leading" secondItem="ujZ-II-ZIo" secondAttribute="leading" id="tuS-Rc-TPC"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="LKl-rY-eyX">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="e9B-gG-DPm">
@@ -67,7 +77,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1074" y="-269"/>
+            <point key="canvasLocation" x="1073.913043478261" y="-269.19642857142856"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Njv-o7-afW">

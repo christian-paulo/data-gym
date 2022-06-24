@@ -20,13 +20,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" estimatedSectionHeaderHeight="-1" sectionFooterHeight="28" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="c8X-EL-rYp">
-                                <rect key="frame" x="0.0" y="194" width="414" height="599"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" estimatedSectionHeaderHeight="-1" sectionFooterHeight="28" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="c8X-EL-rYp">
+                                <rect key="frame" x="0.0" y="140" width="414" height="624"/>
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="9u8-vQ-Tzw"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="c8X-EL-rYp" firstAttribute="top" secondItem="9u8-vQ-Tzw" secondAttribute="top" id="7R7-Rs-HTK"/>
+                            <constraint firstItem="9u8-vQ-Tzw" firstAttribute="trailing" secondItem="c8X-EL-rYp" secondAttribute="trailing" id="FYe-PA-Sea"/>
+                            <constraint firstItem="c8X-EL-rYp" firstAttribute="leading" secondItem="9u8-vQ-Tzw" secondAttribute="leading" id="ZET-es-Gqs"/>
+                            <constraint firstItem="c8X-EL-rYp" firstAttribute="bottom" secondItem="9u8-vQ-Tzw" secondAttribute="bottom" id="yTJ-Wz-1Vw"/>
+                        </constraints>
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="W0I-Y2-9jX">

@@ -13,30 +13,38 @@
         <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="WorkoutCell" rowHeight="47" id="KGk-i7-Jjw" customClass="WorkoutCell" customModule="DataGym" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="320" height="47"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="cellWorkOut" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM" customClass="WorkoutCell" customModule="DataGym" customModuleProvider="target">
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="cellWorkOut" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
                 <rect key="frame" x="0.0" y="0.0" width="320" height="47"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wBe-fY-ZIO">
-                        <rect key="frame" x="294.5" y="16" width="10.5" height="18"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="tintColor" red="0.0" green="0.74901960779999999" blue="0.65098039220000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                        <imageReference key="image" image="chevron.right" catalog="system" symbolScale="small" renderingMode="template"/>
-                    </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AnO-po-l03">
-                        <rect key="frame" x="20" y="10" width="126" height="28"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AnO-po-l03">
+                        <rect key="frame" x="16" y="9" width="126" height="28"/>
                         <fontDescription key="fontDescription" type="system" pointSize="23"/>
                         <color key="textColor" red="0.0" green="0.74901960779999999" blue="0.65098039220000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wBe-fY-ZIO">
+                        <rect key="frame" x="285.5" y="16.5" width="21" height="14"/>
+                        <color key="tintColor" red="0.0" green="0.74901960779999999" blue="0.65098039220000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="wBe-fY-ZIO" secondAttribute="height" constant="1" id="8WV-Q1-mps"/>
+                        </constraints>
+                        <imageReference key="image" image="chevron.right" catalog="system" symbolScale="small" renderingMode="template"/>
+                    </imageView>
                 </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="wBe-fY-ZIO" secondAttribute="trailing" constant="13.5" id="eD9-4d-XJe"/>
+                    <constraint firstItem="AnO-po-l03" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="9" id="kVH-h5-gig"/>
+                    <constraint firstItem="wBe-fY-ZIO" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="muK-Oc-BQ1"/>
+                    <constraint firstAttribute="bottom" secondItem="AnO-po-l03" secondAttribute="bottom" constant="10" id="shX-ZC-0Aj"/>
+                    <constraint firstItem="AnO-po-l03" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="wER-Y1-zO1"/>
+                </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="nomeWorkout" destination="AnO-po-l03" id="Ysw-MP-Kb1"/>
             </connections>
-            <point key="canvasLocation" x="131.8840579710145" y="132.92410714285714"/>
+            <point key="canvasLocation" x="117" y="114"/>
         </tableViewCell>
     </objects>
     <resources>
