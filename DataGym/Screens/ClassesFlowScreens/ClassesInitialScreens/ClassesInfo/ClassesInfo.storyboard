@@ -56,7 +56,7 @@
                                         <connections>
                                             <outlet property="nomeCompleto" destination="S2h-yF-dwO" id="wGz-c5-zGP"/>
                                             <outlet property="restricao" destination="Oo5-9e-bWo" id="9CR-8W-jKD"/>
-                                            <segue destination="gMc-jl-uf7" kind="presentation" identifier="StudentInfo" id="aWg-He-zIh"/>
+                                            <segue destination="gMc-jl-uf7" kind="show" identifier="StudentInfo" id="Dlx-cu-BDF"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -99,6 +99,7 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="7Ql-Nh-Dxe"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="tintColor" red="0.0" green="0.74901960779999999" blue="0.65098039220000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </view>
                     <navigationItem key="navigationItem" id="oih-Q3-zeD">
                         <barButtonItem key="rightBarButtonItem" id="Eql-62-9py">
@@ -128,7 +129,9 @@
         <!--StudentInfo-->
         <scene sceneID="IwZ-28-yJB">
             <objects>
-                <viewControllerPlaceholder storyboardName="StudentInfo" id="gMc-jl-uf7" userLabel="StudentInfo" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardName="StudentInfo" id="gMc-jl-uf7" userLabel="StudentInfo" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="ugt-bc-smK"/>
+                </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Eg-Mr-aXw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="5846" y="-871"/>

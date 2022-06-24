@@ -96,6 +96,8 @@ class ClassesAddScreens: UIViewController, AddAlunosDelegate {
             let addAlunos = navi.topViewController as? ClassesAddAlunos {
             addAlunos.delegate = self
         }
+
+
     }
 }
 extension ClassesAddScreens: AddScreensDelegate {

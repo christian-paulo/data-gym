@@ -63,7 +63,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="AlunosCell" rowHeight="84" id="seU-C1-44v">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="AlunosCell" rowHeight="84" id="seU-C1-44v" customClass="AlunosCell" customModule="DataGym" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="44.5" width="414" height="84"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="seU-C1-44v" id="JOG-NI-w0A">
@@ -86,6 +86,10 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="nomeCompleto" destination="Xph-qI-CA5" id="XYc-WO-okS"/>
+                                            <outlet property="restricao" destination="C5b-sT-heS" id="rZS-qF-LwM"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
