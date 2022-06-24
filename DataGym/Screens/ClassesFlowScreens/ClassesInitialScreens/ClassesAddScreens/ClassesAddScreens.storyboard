@@ -126,6 +126,9 @@
                                         <color key="tintColor" systemColor="systemMintColor"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" image="plus" catalog="system" title=""/>
+                                        <connections>
+                                            <segue destination="saF-c2-23v" kind="presentation" id="Qzi-7z-hHD"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>

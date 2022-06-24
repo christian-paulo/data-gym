@@ -7,6 +7,7 @@
         <attribute name="semesterSchool" optional="YES" attributeType="String"/>
         <relationship name="alunos" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Students" inverseName="classesaluno" inverseEntity="Students"/>
         <relationship name="teacher" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Teacher" inverseName="classes" inverseEntity="Teacher"/>
+        <relationship name="treinos" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="WorkOut" inverseName="classe" inverseEntity="WorkOut"/>
     </entity>
     <entity name="Exercise" representedClassName="Exercise" syncable="YES">
         <attribute name="charge" optional="YES" attributeType="String"/>
@@ -29,13 +30,14 @@
     <entity name="WorkOut" representedClassName="WorkOut" syncable="YES">
         <attribute name="exercises" optional="YES" attributeType="String"/>
         <attribute name="nameWorkOut" optional="YES" attributeType="String"/>
+        <relationship name="classe" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Class" inverseName="treinos" inverseEntity="Class"/>
         <relationship name="exercicios" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Exercise" inverseName="treinos" inverseEntity="Exercise"/>
     </entity>
     <elements>
-        <element name="Class" positionX="-63" positionY="-9" width="128" height="89"/>
+        <element name="Class" positionX="-63" positionY="-9" width="128" height="134"/>
         <element name="Exercise" positionX="-45" positionY="45" width="128" height="104"/>
         <element name="Students" positionX="-54" positionY="63" width="128" height="74"/>
         <element name="Teacher" positionX="-63" positionY="-18" width="128" height="89"/>
-        <element name="WorkOut" positionX="-54" positionY="36" width="128" height="74"/>
+        <element name="WorkOut" positionX="-54" positionY="36" width="128" height="89"/>
     </elements>
 </model>
